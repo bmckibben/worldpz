@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%= favicon_link_tag 'favicon.ico' %> 
+<title>** World Piz **</title>
+<meta name="description" content="The professional website of Ben McKibben">
+<meta name="author" content="Ben McKibben">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<div id="preloader">
+  <div id="status"><%= image_tag("preloader.gif", size: "64", alt: "") %> </div>
+</div>
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
+      <%= link_to image_tag("worldpizText.png"), "#page-top", class: "navbar-brand page-scroll" %>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+        <li class="hidden"> <a href="#page-top"></a> </li>
+        <li> <a class="page-scroll" href="#about">About</a> </li>
+        <li> <a class="page-scroll" href="#services">Menu</a> </li>
+        <li> <a class="page-scroll" href="#works">Merch</a> </li>
+        <li> <a class="page-scroll" href="#team">Team</a> </li>
+        <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li>
+        <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+        <% if user_signed_in? %>
+            <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>        
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container --> 
+</nav>
+
+<!-- Header -->
+<div id="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= image_tag("worldpiz_header_med.png", alt: "World Piz", class: "banner-centered") %><br/>
+          <a href="#about" class="btn btn-primary page-scroll">Tell Me More</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Section -->
+<div id="about">
+  <div class="container">
+    <div class="section-title text-center center">
+      <h2>About</h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-4"><%= image_tag("34.jpg", class: "img-responsive" ) %></div>
+      <div class="col-md-4">
+        <div class="about-text">
+          <h4>Mission</h4>
+          <p>It is our mission to empower those who promote world peace by providing them with a pizza they will be proud to eat.</p>
+          <p>We do this using ethically sourced ingredients.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="about-text">
+          <h4>Goal</h4>
+          <p>In the past few decades, several companies have adopted social responsibility as part of their corporate policy.</p>
+          <p>Social responsibility is our founding principle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services Section -->
+<div id="services" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Recipes</h2>
+      <hr>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Umami</h3>
+          <p>All meat, all the time. Pepperoni, Italian Sausage, Shrimp, Bacon, Shredded Chicken, Moz Cheese Italian Herbs and our home made tomato sauce.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Quintessential</h3>
+          <p>Pepperoni, Italian Sausage, Black Olives, Bell Pepper, Onion, Mushrooms, Mozzarella Cheese, Tomato Sauce, Oregano.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Enchilada Mama</h3>
+          <p>¡Ay, caramba! Chorizo, Jalapeno, Onion, Black Beans, Enchilada Sauce, Mexican Seasonings, Mexican Cheese.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Attack of the Prawn</h3>
+          <p>Homage to <em>Pizza Attack, Malaysia</em> some of the best pizza I&apos;ve ever eaten. Shrimp, Fresh Sliced Tomato, Fresh Basil Leaves on Moz Cheese.</p>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Oxymoron</h3>
+          <p>Vegan all meat pie featuring Beyond Meat products. No animals were harmed in the making of this production.</p>
+        </div>
+      </div>      
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Jambalaya</h3>
+          <p>Ça c'est bon! Andouille Sausage, Shrimp, Crab, Creole Sauce. </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Tandoori</h3>
+          <p>Indian spiced roast chicken and the wife's secret curry recipe.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Abomination</h3>
+          <p>What most people would call an Hawaiian pizza. But our owner thinks there is no place for pineapple on a pizza. Hence the name.</p>
+        </div>
+      </div>      
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Arabian</h3>
+          <p>You could eat this for one thoundsand and one nights</p>
+        </div>
+      </div>      
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Sawadee</h3>
+          <p>Features Chicken and Thai Basil</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>Nigerian</h3>
+          <p>?</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="service">
+          <h3>?</h3>
+          <p>?</p>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div id="works">
+  <div class="container"> <!-- Container -->
+    <div class="section-title text-center center">
+      <h2>Merch</h2>
+      <hr>
+      <div class="clearfix"></div>
+      <p>Keep the dream alive!</p>
+    </div>
+    <div class="categories">
+      <ul class="cat">
+        <li>
+          <ol class="type">
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".lorem">Shirts</a></li>
+            <li><a href="#" data-filter=".consectetur">Other</a></li>
+          </ol>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="row">
+      <div class="portfolio-items">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="<%= path_to_image('portfolio/02.png') %>" title="Be there. Do that. Get the t-shirt!" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>World Pz T</h4>
+                <p>Shirt</p>
+              </div>
+              <%= image_tag("portfolio/02.png",  class: "img-responsive", alt: "T Shirt") %></a> </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
+          <div class="portfolio-item">
+            <div class="hover-bg"> <a href="<%= path_to_image('portfolio/01.png') %>" title="Keep your ride together." rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>World Pz Bumper Sticker</h4>
+                <p>Sticker</p>
+              </div>
+              <%= image_tag("portfolio/01.png",  class: "img-responsive", alt: "Bumper Sticker") %></a> </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team Section -->
+<div id="team" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Meet the team</h2>
+      <hr>
+      <p>These are a few of the people who make this possible.</p>
+    </div>
+    <div id="row">
+      <div class="col-xs-6 col-md-3 col-sm-6"><%= image_tag("team/01.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+          <div class="caption">
+            <h3>Ben McKibben</h3>
+            <p>CEO</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/02.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+          <div class="caption">
+            <h3>Jane</h3>
+            <p>COO</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/03.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+          <div class="caption">
+            <h3>Frank</h3>
+            <p>CFO</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/04.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+          <div class="caption">
+            <h3>Jill</h3>
+            <p>CMO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonials Section -->
+<div id="testimonials" class="text-center">
+  <div class="container">
+    <div class="section-title center testimonial-well">
+      <h2>What people say</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="row testimonials">
+          <div class="col-sm-4">
+            <blockquote class="testimonial-well"><i class="fa fa-quote-left"></i>
+              <p>If we knew what we were doing, it wouldn&apos;t be called research, would it?</p>
+              <div class="clients-name">
+                <p><strong>Albert Einstien</strong><br>
+                  <em>Renowned Physicist</em></p>
+              </div>
+            </blockquote>
+          </div>
+          <div class="col-sm-4">
+            <blockquote class="testimonial-well"><i class="fa fa-quote-left"></i>
+              <p>A man who is afraid to make mistakes is unlikely to make anything.</p>
+              <div class="clients-name">
+                <p><strong>John Cleese</strong><br>
+                  <em>Monty Python</em></p>
+              </div>
+            </blockquote>
+          </div>
+          <div class="col-sm-4">
+            <blockquote class="testimonial-well"><i class="fa fa-quote-left"></i>
+              <p>We learn something every day, and lots of times it&apos;s that what we learned the day before was wrong.</p>
+              <div class="clients-name">
+                <p><strong>Bill Vaughan</strong><br>
+                  <em>Columnist and Author</em></p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Contact us</h2>
+      <hr>
+      <p>Use the form below to send me a message.</p>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-8 col-md-offset-2">
+      <h3>Leave us a message</h3>
+<div data-ng-app="appContact">
+  <div ng-controller="ctlrContact">
+    <form ng-class="form" ng-submit="sendEmail(email_name,email_address,email_message)">  
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="contactName" name="email_name" class="form-control" placeholder="Name" required="required" ng-model="email_name">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="contactEmail" name="email_address" class="form-control" placeholder="Email" required="required" ng-model="email_address">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="email_message" id="contactMessage" class="form-control" rows="4" placeholder="Message" required ng-model="email_message"></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+      <div class="social">
+        <h3>Follow World Piz</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/1worldpiz"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/1WorldPiz"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://twitter.com/1WorldPiz"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/1WorldPiz"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/1WorldPiz"><i class="fa fa-snapchat-ghost"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">
+    <p>&copy; World Piz, LLC, <%= Time.now.year %>. All rights reserved.<br/>
+        v.2016.357</p>
+  </div>
+</div>
+
+</body>
+</html>

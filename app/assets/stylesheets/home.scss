@@ -1,0 +1,124 @@
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover !important;
+    -o-background-size: cover;
+}
+
+.carousel-control {
+    font-size: 36px;
+}
+
+.carousel {
+  height: 400px;
+}
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/callout.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 20px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-item p {
+    text-align: justify;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+.img-portfolio:hover {
+    opacity: 0.8;
+}
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Map */
+
+.map {
+    height: 500px;
+}
+
+@media(max-width:768px) {
+    .map {
+        height: 75%;
+    }
+}
+
+.banner-centered {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -21,14 +21,28 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem "nokogiri"
+gem "crono"
+gem 'haml'
+gem 'sinatra', require: nil
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+gem 'devise'
+gem 'pundit'
+gem 'bcrypt'
+gem 'simple_enum', '~> 2.0.0' , require: 'simple_enum/mongoid'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# assets 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'angularjs-rails'
+# provides a CRSF Token Header for angularjs posts
+gem 'angular_rails_csrf'
+
+# per heroku
+gem 'rails_12factor'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
