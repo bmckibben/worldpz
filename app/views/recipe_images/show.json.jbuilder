@@ -1,0 +1,1 @@
+json.partial! "recipe_images/recipe_image", recipe_image: @recipe_image

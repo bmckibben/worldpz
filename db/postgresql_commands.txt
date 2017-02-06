@@ -1,0 +1,16 @@
+ben@ben-VirtualBox:/media/sf_apps$ sudo -i -u postgres
+[sudo] password for ben: 
+postgres@ben-VirtualBox:~$ createuser --createdb --login -P worldpz
+Enter password for new role: 
+Enter it again: 
+postgres@ben-VirtualBox:~$ exit
+ben@ben-VirtualBox:/media/sf_apps/worldpz$ rake db:create
+ben@ben-VirtualBox:/media/sf_apps/worldpz$ rake db:migrate
+
+rails generate scaffold recipe_category category_id:integer category_name:string
+rails generate scaffold recipes recipe_id:integer recipe_name:string recipe_description:string recipe_category:integer
+rails generate scaffold recipe_images images_id:integer recipe_id:integer image_url:string
+rails generate scaffold recipe_steps step_id:integer step_id:integer step_order:integer step_instruction:string 
+rails generate scaffold recipe_steps_ingredients step_ingredient_id:integer step_id:integer ingredient_id:integer step_ingredient_quantity:decimal ingredient_units_id:integer
+rails generate scaffold recipe_ingredients_units ingredient_unit_id:integer ingredient_unit_name:string
+rails generate scaffold recipe_ingredients ingredient_id:integer ingredient_name:string

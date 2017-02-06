@@ -1,0 +1,1 @@
+json.array! @recipe_steps_ingredients, partial: 'recipe_steps_ingredients/recipe_steps_ingredient', as: :recipe_steps_ingredient

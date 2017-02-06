@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Recipe Steps Ingredients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step ingredient</th>
+      <th>Step</th>
+      <th>Ingredient</th>
+      <th>Step ingredient quantity</th>
+      <th>Ingredient units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipe_steps_ingredients.each do |recipe_steps_ingredient| %>
+      <tr>
+        <td><%= recipe_steps_ingredient.step_ingredient_id %></td>
+        <td><%= recipe_steps_ingredient.step_id %></td>
+        <td><%= recipe_steps_ingredient.ingredient_id %></td>
+        <td><%= recipe_steps_ingredient.step_ingredient_quantity %></td>
+        <td><%= recipe_steps_ingredient.ingredient_units_id %></td>
+        <td><%= link_to 'Show', recipe_steps_ingredient %></td>
+        <td><%= link_to 'Edit', edit_recipe_steps_ingredient_path(recipe_steps_ingredient) %></td>
+        <td><%= link_to 'Destroy', recipe_steps_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe steps ingredient', new_recipe_steps_ingredient_path %>
