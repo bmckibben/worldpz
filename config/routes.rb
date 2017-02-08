@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :recipe_images
   resources :recipes
   resources :recipe_categories
+  resources :users
 
      
 end
