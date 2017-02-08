@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Step ingredient</th>
       <th>Step</th>
       <th>Ingredient</th>
       <th>Step ingredient quantity</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @recipe_steps_ingredients.each do |recipe_steps_ingredient| %>
       <tr>
-        <td><%= recipe_steps_ingredient.step_ingredient_id %></td>
         <td><%= recipe_steps_ingredient.step_id %></td>
         <td><%= recipe_steps_ingredient.ingredient_id %></td>
         <td><%= recipe_steps_ingredient.step_ingredient_quantity %></td>

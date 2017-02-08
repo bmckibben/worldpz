@@ -31,5 +31,10 @@ module Worldpz
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    # Minimum Sass number precision required by bootstrap-sass
+    ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
+
+    config.active_record.schema_format = :sql
   end
 end

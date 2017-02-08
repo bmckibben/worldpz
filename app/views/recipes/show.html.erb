@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Recipe:</strong>
-  <%= @recipe.recipe_id %>
+  <strong>Category:</strong>
+  <%= @recipe.category_id %>
 </p>
 
 <p>
@@ -13,11 +13,6 @@
 <p>
   <strong>Recipe description:</strong>
   <%= @recipe.recipe_description %>
-</p>
-
-<p>
-  <strong>Recipe category:</strong>
-  <%= @recipe.recipe_category %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

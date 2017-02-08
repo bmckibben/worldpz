@@ -14,7 +14,16 @@
 
 <main>
 	<div class="container-fluid">
-	
+	<% if notice.present? %>
+	 <aside class="alert alert-info">
+	 <%= notice %>
+	 </aside>
+	 <% end %>
+	 <% if alert.present? %>
+	 <aside class="alert alert-danger">
+	 <%= alert %>
+	 </aside>
+	<% end %>	
 	<div class="clearfix"></div>	
 	<%= yield %>
 	</div>

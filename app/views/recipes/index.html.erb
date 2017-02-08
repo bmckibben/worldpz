@@ -5,10 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Recipe</th>
+      <th>Category</th>
       <th>Recipe name</th>
       <th>Recipe description</th>
-      <th>Recipe category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipe.recipe_id %></td>
+        <td><%= recipe.category_id %></td>
         <td><%= recipe.recipe_name %></td>
         <td><%= recipe.recipe_description %></td>
-        <td><%= recipe.recipe_category %></td>
         <td><%= link_to 'Show', recipe %></td>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>

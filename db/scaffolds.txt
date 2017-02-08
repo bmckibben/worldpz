@@ -1,0 +1,27 @@
+rails generate scaffold recipe_category category_name:string
+	has_many :recipes
+
+rails generate scaffold recipe category_id:integer recipe_name:string recipe_description:string 
+	has_one :recipe_category
+	has_many :recipe_images
+	has_many :recipe_steps
+
+rails generate scaffold recipe_image recipe_id:integer image_url:string
+	belongs_to :recipe
+
+rails generate scaffold recipe_step recipe_id:integer step_id:integer step_order:integer step_instruction:string 
+	belongs_to :recipes
+	has_many :recipe_steps_ingredients
+	has_many :recipe_ingredients, through: :recipe_steps_ingredients
+
+rails generate scaffold recipe_steps_ingredient step_id:integer ingredient_id:integer step_ingredient_quantity:decimal ingredient_units_id:integer
+	belongs_to :recipe_steps
+	belongs_to :recipe_ingredients
+	has_one :recipe_ingredients_units
+
+rails generate scaffold recipe_ingredient ingredient_name:string
+	has_many :recipe_steps_ingredients
+	has_many :recipe_steps, through: :recipe_steps_ingredients
+
+rails generate scaffold recipe_ingredients_unit ingredient_unit_name:string
+	belongs_to :recipe_step_ingredients

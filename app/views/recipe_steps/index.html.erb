@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Step</th>
+      <th>Recipe</th>
       <th>Step</th>
       <th>Step order</th>
       <th>Step instruction</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @recipe_steps.each do |recipe_step| %>
       <tr>
-        <td><%= recipe_step.step_id %></td>
+        <td><%= recipe_step.recipe_id %></td>
         <td><%= recipe_step.step_id %></td>
         <td><%= recipe_step.step_order %></td>
         <td><%= recipe_step.step_instruction %></td>

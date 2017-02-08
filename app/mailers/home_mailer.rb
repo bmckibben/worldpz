@@ -6,7 +6,7 @@ class HomeMailer < ApplicationMailer
   	@email_address = email_address
   	@email_message = email_message
 
-    mail(to: "mckibben@att.net", subject: "Contact from LiteralLight")
+    mail(to: "mckibben@att.net", subject: "Contact from WorldPz")
 
   end
 
