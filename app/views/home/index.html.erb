@@ -32,8 +32,8 @@
         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
         <li class="hidden"> <a href="#page-top"></a> </li>
         <li> <a class="page-scroll" href="#about">About</a> </li>
-        <li> <a class="page-scroll" href="#services">Menu</a> </li>
-        <li> <a class="page-scroll" href="#works">Merch</a> </li>
+        <li> <a class="page-scroll" href="#recipes">Recipes</a> </li>
+        <li> <a class="page-scroll" href="#merch">Merch</a> </li>
         <li> <a class="page-scroll" href="#team">Team</a> </li>
         <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li>
         <li> <a class="page-scroll" href="#contact">Contact</a> </li>
@@ -88,7 +88,7 @@
   </div>
 </div>
 <!-- Services Section -->
-<div id="services" class="text-center">
+<div id="recipes" class="text-center">
   <div class="container">
     <div class="section-title center">
       <h2>Recipes</h2>
@@ -105,19 +105,19 @@
       <div class="col-md-3 col-sm-6">
         <div class="service">
           <h3>Quintessential</h3>
-          <p>Pepperoni, Italian Sausage, Black Olives, Bell Pepper, Onion, Mushrooms, Mozzarella Cheese, Tomato Sauce, Oregano.</p>
+          <p>The original IMHO. Pepperoni, Italian Sausage, Black Olives, Bell Pepper, Onion, Mushrooms, Mozzarella Cheese, Red Sauce, Oregano.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="service">
           <h3>Enchilada Mama</h3>
-          <p>¡Ay, caramba! Carnitas, Jalapeno, Black Beans, Enchilada Sauce, Mexican Cheese.</p>
+          <p>¡Ay, caramba! Carnitas, Jalapeno, Black Beans, Enchilada Sauce, Cheddar/Jack Cheese.</p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="service">
           <h3>Attack of the Prawn</h3>
-          <p>Homage to <em>Pizza Attack, Malaysia</em> some of the best pizza I&apos;ve ever eaten. Shrimp, Fresh Sliced Tomato, Fresh Basil Leaves on Moz Cheese.</p>
+          <p>Homage to <em>Pizza Attack, Malaysia</em> some of the best pizza I&apos;ve ever eaten. Shrimp, Fresh Sliced Tomato, Fresh Basil Leaves on Moz/Parm Cheese.</p>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
   </div>
 </div>
 <!-- Portfolio Section -->
-<div id="works">
+<div id="merch">
   <div class="container"> <!-- Container -->
     <div class="section-title text-center center">
       <h2>Merch</h2>
@@ -164,35 +164,55 @@
         <li>
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".lorem">Shirts</a></li>
-            <li><a href="#" data-filter=".consectetur">Other</a></li>
+            <li><a href="#" data-filter=".shirts">Shirts</a></li>
+            <li><a href="#" data-filter=".stickers">Stickers</a></li>
+            <li><a href="#" data-filter=".pins">Pins</a></li>
           </ol>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      <div class="portfolio-items">
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="<%= path_to_image('portfolio/02.png') %>" title="Be there. Do that. Get the t-shirt!" rel="prettyPhoto">
+      <div class="merch-items">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shirts">
+          <div class="merch-item">
+            <div class="hover-bg"> 
+              <a href="<%= path_to_image('merch/02.png') %>" title="Be there. Do that. Get the t-shirt!" rel="prettyPhoto">
               <div class="hover-text">
                 <h4>World Piz T</h4>
                 <p>Shirt</p>
               </div>
-              <%= image_tag("portfolio/02.png",  class: "img-responsive", alt: "T Shirt") %></a> </div>
+              <%= image_tag("merch/02.png",  class: "img-responsive", alt: "T Shirt") %>
+              </a> 
+            </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="<%= path_to_image('portfolio/01.png') %>" title="Keep your ride together." rel="prettyPhoto">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 stickers">
+          <div class="merch-item">
+            <div class="hover-bg"> 
+              <a href="<%= path_to_image('merch/01.png') %>" title="Keep your ride together." rel="prettyPhoto">
               <div class="hover-text">
                 <h4>Bumper Sticker</h4>
                 <p>Sticker</p>
               </div>
-              <%= image_tag("portfolio/01.png",  class: "img-responsive", alt: "Bumper Sticker") %></a> </div>
+              <%= image_tag("merch/01.png",  class: "img-responsive", alt: "Bumper Sticker") %>
+              </a> 
+            </div>
           </div>
-        </div>        
+        </div> 
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pins">
+          <div class="merch-item">
+            <div class="hover-bg"> 
+              <a href="<%= path_to_image('merch/04.png') %>" title="Stick it to the man." rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Peace Sign</h4>
+                <p>Pin</p>
+              </div>
+              <%= image_tag("merch/04.png",  class: "img-responsive", alt: "Pin") %>
+              </a> 
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -206,34 +226,35 @@
       <p>These are a few of the people who make this possible.</p>
     </div>
     <div id="row">
-      <div class="col-xs-6 col-md-3 col-sm-6"><%= image_tag("team/01.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+      <div class="col-xs-12 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/01.jpg",  class: "img-thumbnail team-img", alt: "...") %>
           <div class="caption">
-            <h3>Ben McKibben</h3>
+            <h3>Ben</h3>
             <p>Pizzaiolo</p>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-3 col-sm-6">
-        <div class="thumbnail"><%= image_tag("team/02.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+      <div class="col-xs-12 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/02.png",  class: "img-thumbnail team-img", alt: "...") %>
           <div class="caption">
-            <h3>Jane</h3>
-            <p>COO</p>
+            <h3>Jean Luc</h3>
+            <p>Ethics</p>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-3 col-sm-6">
-        <div class="thumbnail"><%= image_tag("team/03.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+      <div class="col-xs-12 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/03.png",  class: "img-thumbnail team-img", alt: "...") %>
           <div class="caption">
-            <h3>Frank</h3>
-            <p>CFO</p>
+            <h3>Obi Wan</h3>
+            <p>Spiritual</p>
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-md-3 col-sm-6">
-        <div class="thumbnail"><%= image_tag("team/04.jpg",  class: "img-thumbnail team-img", alt: "...") %>
+      <div class="col-xs-12 col-md-3 col-sm-6">
+        <div class="thumbnail"><%= image_tag("team/04.png",  class: "img-thumbnail team-img", alt: "...") %>
           <div class="caption">
-            <h3>Jill</h3>
-            <p>CMO</p>
+            <h3>Barrak</h3>
+            <p>Cool</p>
           </div>
         </div>
       </div>

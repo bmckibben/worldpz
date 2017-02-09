@@ -1,12 +1,15 @@
 <td>
-  <%= link_to user.name, edit_user_registration_path(user) %>
+  <%= link_to user.email, edit_user_registration_path(user) %>
 </td>
 <td>
-  <%= user.email %><br/><%= user.id %>
+  <%= user.email %>
+</td>
+<td>
+  role
 </td>
 <td>
 <!--  -->
 </td>
 <td>
-  <%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-primary button-xs') unless user == current_user %>
+  <%= link_to user_path(user), method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %>
 </td>
