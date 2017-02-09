@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.1
--- Dumped by pg_dump version 9.6.1
+-- Dumped from database version 9.5.5
+-- Dumped by pg_dump version 9.5.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -312,63 +311,63 @@ ALTER SEQUENCE users_id_seq OWNED BY users.id;
 
 
 --
--- Name: recipe_categories id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_categories ALTER COLUMN id SET DEFAULT nextval('recipe_categories_id_seq'::regclass);
 
 
 --
--- Name: recipe_images id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_images ALTER COLUMN id SET DEFAULT nextval('recipe_images_id_seq'::regclass);
 
 
 --
--- Name: recipe_ingredients id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients ALTER COLUMN id SET DEFAULT nextval('recipe_ingredients_id_seq'::regclass);
 
 
 --
--- Name: recipe_ingredients_units id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients_units ALTER COLUMN id SET DEFAULT nextval('recipe_ingredients_units_id_seq'::regclass);
 
 
 --
--- Name: recipe_steps id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps ALTER COLUMN id SET DEFAULT nextval('recipe_steps_id_seq'::regclass);
 
 
 --
--- Name: recipe_steps_ingredients id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps_ingredients ALTER COLUMN id SET DEFAULT nextval('recipe_steps_ingredients_id_seq'::regclass);
 
 
 --
--- Name: recipes id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipes ALTER COLUMN id SET DEFAULT nextval('recipes_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
 
 
 --
--- Name: recipe_categories recipe_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_categories
@@ -376,7 +375,7 @@ ALTER TABLE ONLY recipe_categories
 
 
 --
--- Name: recipe_images recipe_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_images
@@ -384,7 +383,7 @@ ALTER TABLE ONLY recipe_images
 
 
 --
--- Name: recipe_ingredients recipe_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients
@@ -392,7 +391,7 @@ ALTER TABLE ONLY recipe_ingredients
 
 
 --
--- Name: recipe_ingredients_units recipe_ingredients_units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_ingredients_units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients_units
@@ -400,7 +399,7 @@ ALTER TABLE ONLY recipe_ingredients_units
 
 
 --
--- Name: recipe_steps_ingredients recipe_steps_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_steps_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps_ingredients
@@ -408,7 +407,7 @@ ALTER TABLE ONLY recipe_steps_ingredients
 
 
 --
--- Name: recipe_steps recipe_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps
@@ -416,7 +415,7 @@ ALTER TABLE ONLY recipe_steps
 
 
 --
--- Name: recipes recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipes
@@ -424,7 +423,7 @@ ALTER TABLE ONLY recipes
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY users
