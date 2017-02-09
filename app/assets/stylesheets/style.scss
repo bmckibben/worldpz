@@ -258,36 +258,36 @@ hr {
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
-/* Services Section */
-#services {
+/* recipes Section */
+#recipes {
 	padding: 140px 0;
 	background: url(asset_path("33.jpg"));
 	background-size: cover;
 	background-attachment: fixed;
 }
-#services .service {
+#recipes .service {
 	padding: 20px 10px;
 
 }
-#services h2 {
+#recipes h2 {
 	color: #0206aa;
 }
-#services h3 {
+#recipes h3 {
 	font-size: 20px;
 	font-weight: 600;
 	color: #0206aa;
 }
-#services p {
+#recipes p {
 	color: #0206aa;
 	font-weight: bold;
 }
 
-#services a {
+#recipes a {
 	color: rgba(38, 180, 231, 0.7);
     text-decoration: underline;	
 }
 
-#services a:hover {
+#recipes a:hover {
     color: #CC33FF !important;
     text-decoration: underline;	
 }
@@ -295,7 +295,7 @@ hr {
 .space {
 	margin-top: 40px;
 }
-#services i.fa {
+#recipes i.fa {
 	font-size: 36px;
 	color: #26B4E7;
 	transition: all 0.5s;	

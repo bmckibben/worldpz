@@ -99,6 +99,7 @@ label {
   width: 100%;
 }
 
-#blog .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
-    padding: 4px;
+.alert-dismissable .close, .alert-dismissible .close {
+top: -15px;
+right: -15px;
 }
