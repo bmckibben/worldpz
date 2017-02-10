@@ -1,18 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @recipe.recipe_name %></h1>
+<hr style="width:100%">
+
+
 <p>
-  <strong>Category:</strong>
-  <%= @recipe.category_id %>
+  <strong>Recipe Description:</strong>
+  <%= @recipe.recipe_description.html_safe %>
 </p>
 
 <p>
-  <strong>Recipe name:</strong>
-  <%= @recipe.recipe_name %>
-</p>
-
-<p>
-  <strong>Recipe description:</strong>
-  <%= @recipe.recipe_description %>
+  <strong>Recipe Images:</strong> 
+  <% @recipe.recipe_images.each do |image| %>
+  	<%= image.image_url %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
