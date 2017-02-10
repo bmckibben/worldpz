@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   
   def index
+    @recipes = Recipe.where("category_id = 1 and sort_order > 0").order(:sort_order)
   	render layout: false
   end
   

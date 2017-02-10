@@ -35,7 +35,7 @@
         <li> <a class="page-scroll" href="#recipes">Recipes</a> </li>
         <li> <a class="page-scroll" href="#merch">Merch</a> </li>
         <li> <a class="page-scroll" href="#team">Team</a> </li>
-        <li> <a class="page-scroll" href="#testimonials">Testimonials</a> </li>
+        <li> <a class="page-scroll" href="#testimonials">Quotes</a> </li>
         <li> <a class="page-scroll" href="#contact">Contact</a> </li>
         <% if user_signed_in? %>
             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
@@ -96,57 +96,14 @@
     </div>
     <div class="space"></div>
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <% @recipes.each do |recipe| %>
+      <div class="col-md-3 col-sm-6 col-xs-12" >
         <div class="service">
-          <h3>Umami</h3>
-          <p>All meat, all the time. Pepperoni, Italian Sausage, Shrimp, Bacon, Shredded Chicken, Moz Cheese Italian Herbs and our home made tomato sauce.</p>
+          <h3><%= recipe.recipe_name %></h3>
+          <p><%= recipe.recipe_description.html_safe %></p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Quintessential</h3>
-          <p>The original IMHO. Pepperoni, Italian Sausage, Black Olives, Bell Pepper, Onion, Mushrooms, Mozzarella Cheese, Red Sauce, Oregano.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Enchilada Mama</h3>
-          <p>¡Ay, caramba! Carnitas, Jalapeno, Black Beans, Enchilada Sauce, Cheddar/Jack Cheese.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Attack of the Prawn</h3>
-          <p>Homage to <em>Pizza Attack, Malaysia</em> some of the best pizza I&apos;ve ever eaten. Shrimp, Fresh Sliced Tomato, Fresh Basil Leaves on Moz/Parm Cheese.</p>
-        </div>
-      </div>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Oxymoron</h3>
-          <p>Vegan all meat pie featuring Beyond Meat products. No animals were harmed in the making of this production.</p>
-        </div>
-      </div>      
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Jambalaya</h3>
-          <p>Ça c'est bon! Andouille Sausage, Shrimp, Crab, Creole Sauce. </p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Tandoori</h3>
-          <p>Indian spiced roast chicken and the wife's secret curry recipe.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="service">
-          <h3>Abomination</h3>
-          <p>What most people would call an Hawaiian pizza. But our owner thinks there is no place for pineapple on a pizza. Hence the name.</p>
-        </div>
-      </div>      
+      <% end %> 
     </div>
   </div>
 </div>
@@ -164,9 +121,9 @@
         <li>
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".shirts">Shirts</a></li>
-            <li><a href="#" data-filter=".stickers">Stickers</a></li>
-            <li><a href="#" data-filter=".pins">Pins</a></li>
+            <li><a href="#" data-filter=".lorem">Shirts</a></li>
+            <li><a href="#" data-filter=".consectetur">Stickers</a></li>
+            <li><a href="#" data-filter=".dapibus">Pins</a></li>
           </ol>
         </li>
       </ul>
@@ -174,7 +131,7 @@
     </div>
     <div class="row">
       <div class="merch-items">
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 shirts">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 lorem">
           <div class="merch-item">
             <div class="hover-bg"> 
               <a href="<%= path_to_image('merch/02.png') %>" title="Be there. Do that. Get the t-shirt!" rel="prettyPhoto">
@@ -187,7 +144,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 stickers">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 consectetur">
           <div class="merch-item">
             <div class="hover-bg"> 
               <a href="<%= path_to_image('merch/01.png') %>" title="Keep your ride together." rel="prettyPhoto">
@@ -200,7 +157,7 @@
             </div>
           </div>
         </div> 
-        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pins">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 dapibus">
           <div class="merch-item">
             <div class="hover-bg"> 
               <a href="<%= path_to_image('merch/04.png') %>" title="Stick it to the man." rel="prettyPhoto">

@@ -12669,8 +12669,9 @@ label {
 }
 
 /* line 102, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
-#blog .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
-  padding: 4px;
+.alert-dismissable .close, .alert-dismissible .close {
+  top: -15px;
+  right: -15px;
 }
 
 /* line 1, /media/sf_apps/worldpz/app/assets/stylesheets/prettyPhoto.scss */
@@ -14263,9 +14264,9 @@ body,
   padding: 50px 0;
 }
 
-/* Services */
+/* recipes */
 /* line 52, /media/sf_apps/worldpz/app/assets/stylesheets/home.scss */
-.services {
+.recipes {
   padding: 50px 0;
 }
 
@@ -14704,9 +14705,9 @@ hr {
   margin-bottom: 30px;
 }
 
-/* Services Section */
+/* recipes Section */
 /* line 262, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services {
+#recipes {
   padding: 140px 0;
   background: url("/assets/33-ac34d25c2bd3c48f8582def0013296fe72cd4be67f7113732a6b7e0ba525c889.jpg");
   background-size: cover;
@@ -14714,77 +14715,78 @@ hr {
 }
 
 /* line 268, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services .service {
+#recipes .service {
+  height: 170px;
   padding: 20px 10px;
 }
 
-/* line 272, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services h2 {
+/* line 273, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes h2 {
   color: #0206aa;
 }
 
-/* line 275, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services h3 {
+/* line 276, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes h3 {
   font-size: 20px;
   font-weight: 600;
   color: #0206aa;
 }
 
-/* line 280, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services p {
+/* line 281, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes p {
   color: #0206aa;
   font-weight: bold;
 }
 
-/* line 285, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services a {
+/* line 286, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes a {
   color: rgba(38, 180, 231, 0.7);
   text-decoration: underline;
 }
 
-/* line 290, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services a:hover {
+/* line 291, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes a:hover {
   color: #CC33FF !important;
   text-decoration: underline;
 }
 
-/* line 295, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 296, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .space {
   margin-top: 40px;
 }
 
-/* line 298, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#services i.fa {
+/* line 299, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#recipes i.fa {
   font-size: 36px;
   color: #26B4E7;
   transition: all 0.5s;
 }
 
 /* Gallery Section */
-/* line 304, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 305, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #works {
   padding: 120px 0;
   background: #f6f6f6;
 }
 
-/* line 308, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 309, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .categories {
   padding-bottom: 30px;
   text-align: center;
 }
 
-/* line 312, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 313, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 ul.cat li {
   display: inline-block;
 }
 
-/* line 315, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 316, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 ol.type li {
   display: inline-block;
   margin-left: 20px;
 }
 
-/* line 319, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 320, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 ol.type li a {
   color: #777;
   padding: 8px 16px;
@@ -14792,31 +14794,31 @@ ol.type li a {
   border-radius: 2px;
 }
 
-/* line 325, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 326, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 ol.type li a.active {
   color: #f6f6f6;
   border: 1px solid #cf5022;
   background: #cf5022;
 }
 
-/* line 330, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 331, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 ol.type li a:hover {
   color: #f6f6f6;
   border: 1px solid #cf5022;
   background: #cf5022;
 }
 
-/* line 335, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 336, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope-item {
   z-index: 2;
 }
 
-/* line 338, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 339, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope-hidden.isotope-item {
   z-index: 1;
 }
 
-/* line 341, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 342, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope, .isotope .isotope-item {
   /* change duration value to whatever you like */
   -webkit-transition-duration: 0.8s;
@@ -14824,14 +14826,14 @@ ol.type li a:hover {
   transition-duration: 0.8s;
 }
 
-/* line 347, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 348, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope-item {
   margin-right: -1px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* line 352, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 353, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -14840,7 +14842,7 @@ ol.type li a:hover {
   transition-property: height, width;
 }
 
-/* line 359, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 360, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .isotope .isotope-item {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -14849,19 +14851,19 @@ ol.type li a:hover {
   transition-property: transform, opacity;
 }
 
-/* line 366, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 367, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .portfolio-item {
   margin-bottom: 30px;
 }
 
-/* line 369, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 370, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .portfolio-item .hover-bg {
   max-height: 190px;
   overflow: hidden;
   position: relative;
 }
 
-/* line 374, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 375, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg .hover-text {
   position: absolute;
   text-align: center;
@@ -14875,7 +14877,7 @@ ol.type li a:hover {
   transition: all 0.5s;
 }
 
-/* line 386, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 387, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg .hover-text > h4 {
   opacity: 0;
   -webkit-transform: translateY(100%);
@@ -14884,7 +14886,7 @@ ol.type li a:hover {
   color: #f6f6f6;
 }
 
-/* line 393, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 394, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
   -webkit-backface-visibility: hidden;
@@ -14892,7 +14894,7 @@ ol.type li a:hover {
   transform: translateY(0);
 }
 
-/* line 399, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 400, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg .hover-text > p {
   opacity: 0;
   -webkit-transform: translateY(100%);
@@ -14900,7 +14902,7 @@ ol.type li a:hover {
   transition: all 0.3s;
 }
 
-/* line 405, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 406, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg:hover .hover-text > p {
   opacity: 1;
   -webkit-backface-visibility: hidden;
@@ -14908,7 +14910,7 @@ ol.type li a:hover {
   transform: translateY(0);
 }
 
-/* line 411, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 412, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg .hover-text > i {
   opacity: 0;
   -webkit-transform: translateY(0);
@@ -14916,7 +14918,7 @@ ol.type li a:hover {
   transition: all 0.3s;
 }
 
-/* line 417, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 418, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg:hover .hover-text > i {
   opacity: 1;
   -webkit-backface-visibility: hidden;
@@ -14924,12 +14926,12 @@ ol.type li a:hover {
   transform: translateY(100%);
 }
 
-/* line 423, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 424, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .hover-bg:hover .hover-text {
   opacity: 1;
 }
 
-/* line 426, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 427, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #works i.fa {
   font-size: 20px;
   padding: 5px;
@@ -14937,13 +14939,13 @@ ol.type li a:hover {
 }
 
 /* Team Section */
-/* line 432, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 433, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #team {
   padding: 140px 0;
   background: #e6e6e6;
 }
 
-/* line 436, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 437, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 img.img-thumbnail.team-img {
   width: 200px;
   height: 200px;
@@ -14952,20 +14954,20 @@ img.img-thumbnail.team-img {
   background-color: #f6f6f6;
 }
 
-/* line 443, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 444, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #team .thumbnail {
   background: transparent;
   border: 0;
 }
 
-/* line 447, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 448, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #team .thumbnail .caption {
   padding: 9px;
   color: #777;
 }
 
 /* Testimonials Section */
-/* line 452, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 453, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials {
   background: url("/assets/36-0c85ea498cc16ef31d276984a353c515819cff8d55461502026a01580647cba7.jpg");
   background-size: cover;
@@ -14974,17 +14976,17 @@ img.img-thumbnail.team-img {
   padding: 140px 0;
 }
 
-/* line 459, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 460, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials h2 {
   color: #fff;
 }
 
-/* line 463, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 464, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials hr {
   color: #fff;
 }
 
-/* line 467, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 468, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials blockquote {
   position: relative;
   margin-top: 20px;
@@ -14992,14 +14994,14 @@ img.img-thumbnail.team-img {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* line 473, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 474, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials i {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 14px;
 }
 
-/* line 478, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 479, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials .clients-name {
   display: inline-block;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -15008,7 +15010,7 @@ img.img-thumbnail.team-img {
 }
 
 /* bmc customizations */
-/* line 485, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 486, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .testimonial-well {
   min-height: 20px;
   padding: 19px;
@@ -15022,13 +15024,13 @@ img.img-thumbnail.team-img {
 }
 
 /* Contact Section */
-/* line 497, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 498, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact {
   padding: 120px 0 40px 0;
   background: #f6f6f6;
 }
 
-/* line 501, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 502, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .contact-item {
   padding: 10px;
   margin: 10px;
@@ -15036,32 +15038,32 @@ img.img-thumbnail.team-img {
   border-radius: 4px;
 }
 
-/* line 507, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 508, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact h3 {
   font-size: 20px;
   font-weight: 400;
   margin-top: 40px;
 }
 
-/* line 512, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 513, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact form {
   padding: 30px 0;
 }
 
-/* line 515, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 516, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact i.fa {
   font-size: 22px;
   color: #26B4E7;
   margin-bottom: 10px;
 }
 
-/* line 520, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 521, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .text-danger {
   color: #ff3333;
   text-align: left;
 }
 
-/* line 524, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 525, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 label {
   font-size: 12px;
   font-weight: 400;
@@ -15069,7 +15071,7 @@ label {
   float: left;
 }
 
-/* line 530, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 531, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .form-control {
   display: block;
   width: 100%;
@@ -15088,7 +15090,7 @@ label {
   transition: none;
 }
 
-/* line 547, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 548, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .form-control:focus {
   border-color: inherit;
   outline: 0;
@@ -15096,7 +15098,7 @@ label {
   box-shadow: transparent;
 }
 
-/* line 553, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 554, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .btn-default {
   background: #cf5022;
   border: 0;
@@ -15107,13 +15109,13 @@ label {
   font-size: 15px;
 }
 
-/* line 562, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 563, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .btn-default:hover, #contact .btn-default:focus {
   color: #f6f6f6;
   background: #a13e1a;
 }
 
-/* line 566, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 567, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 .btn:active, .btn.active {
   background-image: none;
   outline: 0;
@@ -15121,24 +15123,24 @@ label {
   box-shadow: none;
 }
 
-/* line 572, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 573, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
   outline: none;
   outline-offset: none;
 }
 
-/* line 576, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 577, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .social ul {
   margin-top: 30px;
 }
 
-/* line 579, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 580, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .social ul li {
   display: inline-block;
   margin: 0 20px;
 }
 
-/* line 583, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 584, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .social i.fa {
   font-size: 24px;
   padding-top: 8px;
@@ -15147,13 +15149,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   transition: all 0.3s;
 }
 
-/* line 590, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 591, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #contact .social i.fa:hover {
   color: #a13e1a;
 }
 
 /* Footer Section*/
-/* line 594, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 595, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #footer {
   background: #333;
   color: #777;
@@ -15161,35 +15163,35 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
   text-align: center;
 }
 
-/* line 600, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 601, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #footer a {
   color: #999999;
 }
 
-/* line 603, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 604, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #footer a:hover, a:focus {
   color: #26B4E7;
 }
 
-/* line 606, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+/* line 607, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #footer p {
   font-size: 13px;
   margin-top: 10px;
 }
 
 @media (max-width: 768px) {
-  /* line 612, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+  /* line 613, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
   .hover-bg .hover-text {
     padding: 20%;
   }
 }
 @media (max-width: 640px) {
-  /* line 618, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+  /* line 619, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
   #intro .intro-body H1 {
     font-size: 36px;
   }
 
-  /* line 621, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+  /* line 622, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
   ol.type li {
     margin-top: 30px;
   }
