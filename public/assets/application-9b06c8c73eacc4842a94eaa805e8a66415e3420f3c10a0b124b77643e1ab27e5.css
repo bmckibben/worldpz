@@ -15196,3 +15196,14 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin-top: 30px;
   }
 }
+/* line 627, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+.recipe-desc {
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 14pts;
+}
+
+/* line 632, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+.recipe-image {
+  width: 100%;
+  height: auto;
+}

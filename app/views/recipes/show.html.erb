@@ -1,20 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6 col-md-offset-3 col-xs-12">
+	<h1><%= @recipe.recipe_name %></h1>
+	<hr style="width:100%">
 
-<h1><%= @recipe.recipe_name %></h1>
-<hr style="width:100%">
+	<div class="row">
 
+		<div class="col-md-6 col-xs-12">
+		  <% @recipe.recipe_images.each do |image| %>
+		    <%= image_tag(image.image_url, alt: @recipe.recipe_name, class: "recipe-image" ) %>
+		  <% end %>
+		</div>
+		<div class="col-md-6 col-xs-12 recipe-desc">
+			<%= @recipe.recipe_description.html_safe %>
+		</div>
 
-<p>
-  <strong>Recipe Description:</strong>
-  <%= @recipe.recipe_description.html_safe %>
-</p>
-
-<p>
-  <strong>Recipe Images:</strong> 
-  <% @recipe.recipe_images.each do |image| %>
-  	<%= image.image_url %>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+	</div>
+	<%= link_to 'Close', recipes_path, class: "btn btn-primary pull-right" %>
+</div>
+</div>
