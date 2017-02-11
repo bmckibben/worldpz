@@ -47531,9 +47531,9 @@ function main() {
 */
   	});
 
-  	// Portfolio Isotope Filter
+  	// Merch Isotope Filter
     $(window).load(function() {
-        var $container = $('.portfolio-items');
+        var $container = $('.merch-items');
         $container.isotope({
             filter: '*',
             animationOptions: {
@@ -47564,7 +47564,7 @@ function main() {
   // jQuery Parallax
   function initParallax() {
     $('#intro').parallax("100%", 0.3);
-    $('#services').parallax("100%", 0.3);
+    $('#recipes').parallax("100%", 0.3);
     $('#aboutimg').parallax("100%", 0.3);	
     $('#testimonials').parallax("100%", 0.1);
 

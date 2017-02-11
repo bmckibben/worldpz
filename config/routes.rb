@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   get 'home/index' => 'home#index', :as => 'home'
   get 'admin/index' => 'admin#index', :as => 'admin'
+  post 'home/contact_email' => 'home#contact_email'
   
   resources :recipe_ingredients
   resources :recipe_ingredients_units
