@@ -11,19 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">
+  <div class="col-md-2 col-xs-12 field">
     <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+    <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name) %>
   </div>
-  <div class="field">
+  <div class="col-md-10 col-xs-12 field">
     <%= f.label :recipe_name %><br>
-    <%= f.text_field :recipe_name %>
+    <%= f.text_field :recipe_name, style: "width: 100%"  %>
   </div>
-  <div class="field">
+</div>
+
+<div class="row">  
+  <div class="col-xs-12 field">
     <%= f.label :recipe_description %><br>
-    <%= f.text_area :recipe_description %>
+    <%= f.text_area :recipe_description, class: "recipe-description"%>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="col-xs-12 actions">
+    <%= link_to 'Show', @recipe,  class: "btn btn-default  pull-right" %> 
+    <%= link_to 'Back', recipes_path, class: "btn btn-default  pull-right" %>
+
+    <%= f.submit class: "btn btn-primary pull-right" %>
+
   </div>
+</div>  
 <% end %>
+
+
