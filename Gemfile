@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '4.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -34,9 +34,9 @@ gem 'simple_enum', '~> 2.0.0' , require: 'simple_enum/mongoid'
 # assets 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
-gem 'angularjs-rails'
+gem 'angularjs-rails', '1.5.6'
 # provides a CRSF Token Header for angularjs posts
-gem 'angular_rails_csrf'
+gem 'angular_rails_csrf', '1.0.4'
 
 # per heroku
 gem 'rails_12factor'
