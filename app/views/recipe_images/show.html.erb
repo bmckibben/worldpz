@@ -10,5 +10,10 @@
   <%= @recipe_image.image_url %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@recipe_image.image_url, alt: "image", class: "recipe-image" ) %>
+</p>
+
 <%= link_to 'Edit', edit_recipe_image_path(@recipe_image) %> |
 <%= link_to 'Back', recipe_images_path %>

@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Step:</strong>
-  <%= @recipe_step.step_id %>
-</p>
-
-<p>
   <strong>Step order:</strong>
   <%= @recipe_step.step_order %>
 </p>
@@ -20,5 +15,5 @@
   <%= @recipe_step.step_instruction %>
 </p>
 
-<%= link_to 'Edit', edit_recipe_step_path(@recipe_step) %> |
-<%= link_to 'Back', recipe_steps_path %>
+<%= link_to 'Edit', edit_recipe_step_path(@recipe_step),  class: "btn btn-default  pull-right" %> 
+<%= link_to 'Back', recipe_steps_path,  class: "btn btn-default  pull-right" %> 
