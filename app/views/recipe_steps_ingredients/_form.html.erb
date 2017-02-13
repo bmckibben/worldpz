@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">  
+  <div class="col-md-6 col-xs-12 field">
     <%= f.label :step_id %><br>
     <%= f.number_field :step_id %>
+    <%= collection_select(:step_id, 0, Recipe_steps.all, :id, :step_instruction) %>
   </div>
-  <div class="field">
+  <div class="col-md-6 col-xs-12 field">
     <%= f.label :ingredient_id %><br>
-    <%= f.number_field :ingredient_id %>
-  </div>
-  <div class="field">
+    <%= collection_select(:ingredient_id, 0, Recipe_steps.all, :id, :ingredient_name) %>
+  </div> 
+</div>
+<div class="row">  
+  <div class="col-md-6 col-xs-12 field">
     <%= f.label :step_ingredient_quantity %><br>
     <%= f.text_field :step_ingredient_quantity %>
   </div>
-  <div class="field">
+  <div class="col-md-6 col-xs-12 field">
     <%= f.label :ingredient_units_id %><br>
-    <%= f.number_field :ingredient_units_id %>
-  </div>
+    <%= f.number_field :ingredient_units_id %>   
+  </div> 
+</div>
+
   <div class="actions">
+    <%= link_to 'Show', @recipe_steps_ingredient,  class: "btn btn-default  pull-right" %> 
+    <%= link_to 'Back', recipe_steps_ingredients_path, class: "btn btn-default  pull-right" %>    
     <%= f.submit %>
   </div>
+
+
 <% end %>

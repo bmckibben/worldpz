@@ -11,15 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="row">
+  <div class="col-md-4 col-xs-12 field">
     <%= f.label :recipe_id %><br>
-    <%= f.number_field :recipe_id %>
+    <%= collection_select(:recipe_id, 0, Recipe.all, :id, :recipe_name, {selected: @recipe_image.recipe_id}) %>
   </div>
-  <div class="field">
+  <div class="col-md-8 col-xs-12 field">
     <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url, style: "width:100%" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+</div>  
+
+  <div class="col-md-12 actions">
+    <%= link_to 'Show', @recipe_image,  class: "btn btn-default  pull-right" %>
+    <%= link_to 'Back', recipe_images_path,  class: "btn btn-default  pull-right" %> 
+    <%= f.submit class: "btn btn-primary pull-right" %>
   </div>
 <% end %>

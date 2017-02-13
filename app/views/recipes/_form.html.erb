@@ -14,7 +14,7 @@
 <div class="row">
   <div class="col-md-2 col-xs-12 field">
     <%= f.label :category_id %><br>
-    <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name) %>
+    <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}) %>
   </div>
   <div class="col-md-10 col-xs-12 field">
     <%= f.label :recipe_name %><br>

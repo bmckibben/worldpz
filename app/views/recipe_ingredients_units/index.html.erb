@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipe Ingredients Units</h1>
+<h1>Ingredient Units</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Ingredient unit name</th>
+      <th>Ingredient Unit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,10 @@
     <% @recipe_ingredients_units.each do |recipe_ingredients_unit| %>
       <tr>
         <td><%= recipe_ingredients_unit.ingredient_unit_name %></td>
-        <td><%= link_to 'Show', recipe_ingredients_unit %></td>
-        <td><%= link_to 'Edit', edit_recipe_ingredients_unit_path(recipe_ingredients_unit) %></td>
-        <td><%= link_to 'Destroy', recipe_ingredients_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to recipe_ingredients_unit  do %><i aria-hidden="false" class="glyphicon glyphicon-eye-open"></i><% end %></td>
+        <td><%= link_to edit_recipe_ingredients_unit_path(recipe_ingredients_unit) do %><i aria-hidden="false" class="glyphicon glyphicon-pencil"></i><% end %></td>
+        <td><%= link_to recipe_ingredients_unit, method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %></td>         
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Recipe ingredients unit', new_recipe_ingredients_unit_path %>
+<%= link_to 'New Recipe ingredients unit', new_recipe_ingredients_unit_path,  class: "btn btn-primary" %>

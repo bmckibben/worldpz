@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipe Steps</h1>
+<h1>Recipe Steps</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Recipe</th>
@@ -17,12 +17,12 @@
     <% @recipe_steps.each do |recipe_step| %>
       <tr>
         <td><%= recipe_step.recipe_id %></td>
-        <td><%= recipe_step.step_id %></td>
         <td><%= recipe_step.step_order %></td>
         <td><%= recipe_step.step_instruction %></td>
-        <td><%= link_to 'Show', recipe_step %></td>
-        <td><%= link_to 'Edit', edit_recipe_step_path(recipe_step) %></td>
-        <td><%= link_to 'Destroy', recipe_step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to recipe_step  do %><i aria-hidden="false" class="glyphicon glyphicon-eye-open"></i><% end %></td>
+        <td><%= link_to edit_recipe_step_path(recipe_step) do %><i aria-hidden="false" class="glyphicon glyphicon-pencil"></i><% end %></td>
+        <td><%= link_to recipe_step, method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %></td>          
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Recipe step', new_recipe_step_path %>
+<%= link_to 'New Step', new_recipe_step_path,  class: "btn btn-primary" %>

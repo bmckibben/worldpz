@@ -12674,6 +12674,11 @@ label {
   right: -15px;
 }
 
+/* line 107, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+.actions {
+  margin-top: 2em;
+}
+
 /* line 1, /media/sf_apps/worldpz/app/assets/stylesheets/prettyPhoto.scss */
 div.pp_default .pp_top, div.pp_default .pp_top .pp_middle, div.pp_default .pp_top .pp_left, div.pp_default .pp_top .pp_right, div.pp_default .pp_bottom, div.pp_default .pp_bottom .pp_left, div.pp_default .pp_bottom .pp_middle, div.pp_default .pp_bottom .pp_right {
   height: 13px;

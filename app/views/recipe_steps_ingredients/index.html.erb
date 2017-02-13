@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipe Steps Ingredients</h1>
+<h1>Step Ingredients</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Step</th>
@@ -20,9 +20,10 @@
         <td><%= recipe_steps_ingredient.ingredient_id %></td>
         <td><%= recipe_steps_ingredient.step_ingredient_quantity %></td>
         <td><%= recipe_steps_ingredient.ingredient_units_id %></td>
-        <td><%= link_to 'Show', recipe_steps_ingredient %></td>
-        <td><%= link_to 'Edit', edit_recipe_steps_ingredient_path(recipe_steps_ingredient) %></td>
-        <td><%= link_to 'Destroy', recipe_steps_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to recipe_steps_ingredient  do %><i aria-hidden="false" class="glyphicon glyphicon-eye-open"></i><% end %></td>
+        <td><%= link_to edit_recipe_steps_ingredient_path(recipe_steps_ingredient) do %><i aria-hidden="false" class="glyphicon glyphicon-pencil"></i><% end %></td>
+        <td><%= link_to recipe_steps_ingredient, method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %></td>        
       </tr>
     <% end %>
   </tbody>

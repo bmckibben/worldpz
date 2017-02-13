@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Recipe Images</h1>
+<h1>Recipe Images</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Recipe</th>
@@ -16,9 +16,10 @@
       <tr>
         <td><%= recipe_image.recipe_id %></td>
         <td><%= recipe_image.image_url %></td>
-        <td><%= link_to 'Show', recipe_image %></td>
-        <td><%= link_to 'Edit', edit_recipe_image_path(recipe_image) %></td>
-        <td><%= link_to 'Destroy', recipe_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to recipe_image  do %><i aria-hidden="false" class="glyphicon glyphicon-eye-open"></i><% end %></td>
+        <td><%= link_to edit_recipe_image_path(recipe_image) do %><i aria-hidden="false" class="glyphicon glyphicon-pencil"></i><% end %></td>
+        <td><%= link_to recipe_image, method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %></td>
+
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Recipe image', new_recipe_image_path %>
+<%= link_to 'New Recipe image', new_recipe_image_path,  class: "btn btn-primary  pull-right" %> 
