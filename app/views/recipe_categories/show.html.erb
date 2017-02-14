@@ -1,12 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-
+<div class="row">
+<div class="col-md-6 col-md-offset-3 col-xs-12">
   <h1>Types of <%= @recipe_category.category_name.titleize %></h1>
+	<hr style="width:100%">
+	<div class="row">
+
+		<div class="col-md-6 col-xs-12">
+		  <% @recipe_category.recipes.each do |recipe| %>
+		  	<%= link_to "#{recipe.recipe_name}", recipe %> <br/>
+		  <% end %>
+		</div>
+
+	</div>
+	<%= link_to 'Close', recipe_categories_path, class: "btn btn-primary pull-right" %>
+</div>
+</div>
 
 
-  <% @recipe_category.recipes.each do |recipe| %>
-  	<%= link_to "#{recipe.recipe_name}", recipe %> <br/>
-  <% end %>
 
-<%= link_to 'Edit', edit_recipe_category_path(@recipe_category) %> |
-<%= link_to 'Back', recipe_categories_path %>

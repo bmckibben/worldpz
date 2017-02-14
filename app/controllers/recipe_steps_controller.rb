@@ -28,7 +28,7 @@ class RecipeStepsController < ApplicationController
 
     respond_to do |format|
       if @recipe_step.save
-        format.html { redirect_to @recipe_step, notice: 'Recipe step was successfully created.' }
+        format.html { redirect_to recipe_steps_path, notice: 'Recipe step was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_step }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RecipeStepsController < ApplicationController
   def update
     respond_to do |format|
       if @recipe_step.update(recipe_step_params)
-        format.html { redirect_to @recipe_step, notice: 'Recipe step was successfully updated.' }
+        format.html { redirect_to recipe_steps_path, notice: 'Recipe step was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipe_step }
       else
         format.html { render :edit }

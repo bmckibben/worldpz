@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6 col-md-offset-3 col-xs-12">
+  <h1>Recipe Step</h1>
+	<hr style="width:100%">
+	<div class="row">
 
-<p>
-  <strong>Recipe:</strong>
-  <%= @recipe_step.recipe_id %>
-</p>
+		<div class="col-md-12">
+			<h2>
+			  <%= @recipe_step.recipe_id %>: <%= @recipe_step.recipe.recipe_name rescue "What name?" %>
+			</h2>
+			<p>
+				<br/>
+			  <strong>Step order:</strong>
+			  <%= @recipe_step.step_order %>
+			</p>
 
-<p>
-  <strong>Step order:</strong>
-  <%= @recipe_step.step_order %>
-</p>
+			<p>
+			  <strong>Step instruction:</strong>
+			  <%= @recipe_step.step_instruction %>
+			</p>
 
-<p>
-  <strong>Step instruction:</strong>
-  <%= @recipe_step.step_instruction %>
-</p>
+		</div>
 
-<%= link_to 'Edit', edit_recipe_step_path(@recipe_step),  class: "btn btn-default  pull-right" %> 
-<%= link_to 'Back', recipe_steps_path,  class: "btn btn-default  pull-right" %> 
+	</div>
+	<%= link_to 'Close', recipe_steps_path, class: "btn btn-primary pull-right" %>
+</div>
+</div>

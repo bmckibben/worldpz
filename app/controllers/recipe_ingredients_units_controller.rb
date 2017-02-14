@@ -28,7 +28,7 @@ class RecipeIngredientsUnitsController < ApplicationController
 
     respond_to do |format|
       if @recipe_ingredients_unit.save
-        format.html { redirect_to @recipe_ingredients_unit, notice: 'Recipe ingredients unit was successfully created.' }
+        format.html { redirect_to recipe_ingredients_units_path, notice: 'Recipe ingredients unit was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_ingredients_unit }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RecipeIngredientsUnitsController < ApplicationController
   def update
     respond_to do |format|
       if @recipe_ingredients_unit.update(recipe_ingredients_unit_params)
-        format.html { redirect_to @recipe_ingredients_unit, notice: 'Recipe ingredients unit was successfully updated.' }
+        format.html { redirect_to recipe_ingredients_units_path, notice: 'Recipe ingredients unit was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipe_ingredients_unit }
       else
         format.html { render :edit }

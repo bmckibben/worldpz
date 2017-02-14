@@ -1,9 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6 col-md-offset-3 col-xs-12">
+	<h1>Recipe Ingredient</h1>
+	<hr style="width:100%">
 
-<p>
-  <strong>Ingredient name:</strong>
-  <%= @recipe_ingredient.ingredient_name %>
-</p>
+	<div class="row">
 
-<%= link_to 'Edit', edit_recipe_ingredient_path(@recipe_ingredient) %> |
-<%= link_to 'Back', recipe_ingredients_path %>
+		<div class="col-md-12 col-xs-12">
+			<p>
+			  <strong>Ingredient name:</strong>
+			  <%= @recipe_ingredient.ingredient_name %>
+			</p>
+		</div>
+
+	</div>
+	<%= link_to 'Close', recipe_ingredients_path, class: "btn btn-primary pull-right" %>
+</div>
+</div>

@@ -28,7 +28,7 @@ class RecipeImagesController < ApplicationController
 
     respond_to do |format|
       if @recipe_image.save
-        format.html { redirect_to @recipe_image, notice: 'Recipe image was successfully created.' }
+        format.html { redirect_to recipe_images_path, notice: 'Recipe image was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_image }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RecipeImagesController < ApplicationController
   def update
     respond_to do |format|
       if @recipe_image.update(recipe_image_params)
-        format.html { redirect_to @recipe_image, notice: 'Recipe image was successfully updated.' }
+        format.html { redirect_to recipe_images_path, notice: 'Recipe image was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipe_image }
       else
         format.html { render :edit }

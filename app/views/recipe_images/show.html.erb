@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-6 col-md-offset-3 col-xs-12">
+  <h1>Recipe Image</h1>
+	<hr style="width:100%">
+	<div class="row">
 
-<p>
-  <strong>Recipe:</strong>
-  <%= @recipe_image.recipe_id %>
-</p>
+		<div class="col-md-12">
+			<h2>
+			  <%= @recipe_image.recipe_id %>: <%= @recipe_image.recipe.recipe_name rescue "What name?" %>
+			</h2>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @recipe_image.image_url %>
-</p>
+			<h3>
+			  <%= @recipe_image.image_url %>
+			</h3>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@recipe_image.image_url, alt: "image", class: "recipe-image" ) %>
-</p>
+			<p>
+			  <%= image_tag(@recipe_image.image_url, alt: "image", class: "recipe-image" ) %>
+			</p>
+		</div>
 
-<%= link_to 'Edit', edit_recipe_image_path(@recipe_image) %> |
-<%= link_to 'Back', recipe_images_path %>
+	</div>
+	<%= link_to 'Close', recipe_images_path, class: "btn btn-primary pull-right" %>
+</div>
+</div>

@@ -28,7 +28,7 @@ class RecipeCategoriesController < ApplicationController
 
     respond_to do |format|
       if @recipe_category.save
-        format.html { redirect_to @recipe_category, notice: 'Recipe category was successfully created.' }
+        format.html { redirect_to recipe_categories_path, notice: 'Recipe category was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_category }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class RecipeCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @recipe_category.update(recipe_category_params)
-        format.html { redirect_to @recipe_category, notice: 'Recipe category was successfully updated.' }
+        format.html { redirect_to recipe_categories_path, notice: 'Recipe category was successfully updated.' }
         format.json { render :show, status: :ok, location: @recipe_category }
       else
         format.html { render :edit }
