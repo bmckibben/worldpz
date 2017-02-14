@@ -14616,7 +14616,7 @@ hr {
   padding: 100px 0;
   text-align: center;
   color: #fff;
-  background: url("/assets/43-9b566364e6f1aa387d5c74f57754fa45cfa29c3753c24c0fe83f615c1914d1ae.jpg") no-repeat center center fixed;
+  background: url("/assets/43-0c85ea498cc16ef31d276984a353c515819cff8d55461502026a01580647cba7.jpg") no-repeat center center fixed;
   background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14692,19 +14692,18 @@ hr {
 }
 
 /* line 223, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+#about ul {
+  margin-left: 2em;
+}
+
+/* line 226, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #about li {
+  margin-top: 1em;
   margin-bottom: 3px;
   list-style: none;
   padding: 0;
   font-size: 13px;
-}
-
-/* line 229, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
-#about li:before {
-  content: "✓";
-  font-weight: 600;
-  padding-right: 10px;
-  color: #26B4E7;
+  list-style-type: circle;
 }
 
 /* line 235, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
@@ -14725,7 +14724,7 @@ hr {
 /* line 246, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #about p {
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 /* recipes Section */
@@ -14992,7 +14991,7 @@ img.img-thumbnail.team-img {
 /* Testimonials Section */
 /* line 442, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
 #testimonials {
-  background: url("/assets/36-0c85ea498cc16ef31d276984a353c515819cff8d55461502026a01580647cba7.jpg");
+  background: url("/assets/36-9b566364e6f1aa387d5c74f57754fa45cfa29c3753c24c0fe83f615c1914d1ae.jpg");
   background-size: cover;
   background-attachment: fixed;
   color: #ddd;
