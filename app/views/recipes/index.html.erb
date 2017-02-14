@@ -13,7 +13,7 @@
       <th>Cook Time</th>
       <th>Created At</th>
       <th>Updated At</th>
-      <th colspan="3"></th>
+      <th colspan="3"><%= link_to 'New Recipe', new_recipe_path,  class: "btn btn-primary" %></th>
     </tr>
   </thead>
 
@@ -36,6 +36,5 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Recipe', new_recipe_path,  class: "btn btn-primary" %>
+

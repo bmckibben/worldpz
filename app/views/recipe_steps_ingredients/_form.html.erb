@@ -15,11 +15,11 @@
   <div class="col-md-6 col-xs-12 field">
     <%= f.label :step_id %><br>
     <%= f.number_field :step_id %>
-    <%= collection_select(:step_id, 0, Recipe_steps.all, :id, :step_instruction) %>
+    <%= f.collection_select :step_id, Recipe_steps.all, :id, :step_instruction %>
   </div>
   <div class="col-md-6 col-xs-12 field">
     <%= f.label :ingredient_id %><br>
-    <%= collection_select(:ingredient_id, 0, Recipe_steps.all, :id, :ingredient_name) %>
+    <%= f.collection_select :ingredient_id, Recipe_steps_ingredients.all, :id, :ingredient_name %>
   </div> 
 </div>
 <div class="row">  
@@ -29,7 +29,8 @@
   </div>
   <div class="col-md-6 col-xs-12 field">
     <%= f.label :ingredient_units_id %><br>
-    <%= f.number_field :ingredient_units_id %>   
+    <%= f.number_field :ingredient_units_id %>
+    <%= f.collection_select :ingredient_units_id, recipe_steps_ingredients_units.all, :id, :ingredient_unit_name %>   
   </div> 
 </div>
 

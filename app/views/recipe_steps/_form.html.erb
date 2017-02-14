@@ -14,7 +14,7 @@
 <div class="row">
   <div class="col-md-4 col-xs-12 field">
     <%= f.label :recipe_id %><br>
-    <%= collection_select(:recipe_id, 0, Recipe.all, :id, :recipe_name, {selected: @recipe_step.recipe_id}) %>
+    <%= f.collection_select :recipe_id, Recipe.all, :id, :recipe_name %>
   </div>
   <div class="col-md-8 col-xs-12 field">
     <%= f.label :step_order %><br>

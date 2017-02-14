@@ -8,7 +8,7 @@
       <th>Recipe</th>
       <th>Step order</th>
       <th>Step instruction</th>
-      <th colspan="3"></th>
+      <th colspan="3"><%= link_to 'New Step', new_recipe_step_path,  class: "btn btn-primary" %></th>
     </tr>
   </thead>
 
@@ -27,6 +27,6 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Step', new_recipe_step_path,  class: "btn btn-primary" %>
+
+
