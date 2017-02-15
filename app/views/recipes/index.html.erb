@@ -7,6 +7,7 @@
     <tr>
       <th>Category</th>
       <th>Recipe name</th>
+      <th>Active</th>
       <th>Recipe description</th>
       <th>Sort</th>
       <th>Prep Time</th>
@@ -22,6 +23,7 @@
       <tr>
         <td><%= recipe.category_id %></td>
         <td><%= recipe.recipe_name %></td>
+        <td><%= recipe.active %></td>
         <td><%= recipe.recipe_description.html_safe %></td>
         <td><%= recipe.sort_order %></td>
         <td><%= recipe.prep_minutes %></td>

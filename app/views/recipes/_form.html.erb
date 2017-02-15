@@ -16,7 +16,13 @@
     <%= f.label :category_id %><br>
     <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}) %>
   </div>
-  <div class="col-md-10 col-xs-12 field">
+  <div class="col-md-1 col-xs-12 field">
+    <div class="switch">
+    <label>Active</label><br>
+    <%= f.check_box :active, {id:"cmn-toggle-1",  class:"cmn-toggle cmn-toggle-round"}, checked_value="1", unchecked_value="0"  %><label for="cmn-toggle-1"></label>
+  </div>
+  </div>  
+  <div class="col-md-9 col-xs-12 field">
     <%= f.label :recipe_name %><br>
     <%= f.text_field :recipe_name, style: "width: 100%"  %>
   </div>

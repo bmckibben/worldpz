@@ -3,8 +3,8 @@
 	<h1><%= @recipe.recipe_name %></h1>
 	<hr style="width:100%">
 
-	<div class="row">
-
+	<% if @recipe.active == 1 %>
+	<div class="row">	
 		<div class="col-md-6 col-xs-12">
 		  <% @recipe.recipe_images.each do |image| %>
 		    <%= image_tag(image.image_url, alt: @recipe.recipe_name, class: "recipe-image" ) %>
@@ -13,8 +13,19 @@
 		<div class="col-md-6 col-xs-12 recipe-desc">
 			<%= @recipe.recipe_description.html_safe %>
 		</div>
-
 	</div>
-	<%= link_to 'Close', recipes_path, class: "btn btn-primary pull-right" %>
+	<% else %>
+	<div class="row">	
+		<div class="col-md-12">
+			<p class="h3">Mmm, sound good, don't it? But you see I haven't actually created this one yet. Please check back at in a week or two.</p>
+		</div>		
+	</div>	
+	<% end %>
+
+	<% if user_signed_in? %>
+		<%= link_to 'Close', recipes_path, class: "btn btn-primary pull-right" %>
+	<% else %>
+		<%= link_to 'Back', home_path(anchor: "recipes"), class: "btn btn-primary pull-right" %>
+	<% end %>
 </div>
 </div>

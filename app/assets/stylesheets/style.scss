@@ -209,94 +209,7 @@ hr {
 .section-title h2, .section-title.center h2 {
 	margin-bottom: 30px;
 }
-/* About Section */
-#about {
-	padding: 140px 0;
-	background: #f6f6f6;
-}
-#about .about-text {
-	margin-left: 10px;
-}
-#about H4 {
-	font-size: 20px;
-}
-#about ul {
-	margin-left: 2em;
-}	
-#about li {
-	margin-top: 1em;
-	margin-bottom: 3px;
-	list-style: none;
-	padding: 0;
-	font-size: 16px;
-	font-weight: bold;
-	list-style-type:circle;
-}
 
-#about a:focus, #about a:hover {
-    color: #CC33FF !important;
-    text-decoration: underline;
-}
-
-
-#about i.fa {
-	float: left;
-	display: block;
-	margin-right: 15px;
-	color: #fff;
-	font-size: 44px;
-	text-shadow: 0 0 1px #666;
-}
-#about img {
-	margin-top: 20px;
-}
-#about p {
-	margin-top: 20px;
-	margin-bottom: 0;
-}
-/* recipes Section */
-#recipes {
-	padding: 140px 0;
-	background: url(asset_path("33.jpg"));
-	background-size: cover;
-	background-attachment: fixed;
-}
-#recipes .service {
-	height: 170px;
-	padding: 20px 10px;
-
-}
-#recipes h2 {
-	color: #0206aa;
-}
-#recipes h3 {
-	font-size: 20px;
-	font-weight: 600;
-	color: #0206aa;
-}
-#recipes p {
-	color: #0206aa;
-	font-weight: bold;
-}
-
-#recipes a {
-	color: rgba(38, 180, 231, 0.7);
-    text-decoration: underline;	
-}
-
-#recipes a:hover {
-    color: #CC33FF !important;
-    text-decoration: underline;	
-}
-
-.space {
-	margin-top: 40px;
-}
-#recipes i.fa {
-	font-size: 36px;
-	color: #26B4E7;
-	transition: all 0.5s;	
-}
 /* Gallery Section */
 #works {
 	padding: 120px 0;
@@ -634,3 +547,51 @@ ol.type li {
 	width: 100%;
 	height: 200px;
 }
+
+.space {
+    margin-top: 40px;
+}
+
+/* cmn toggles */
+.cmn-toggle {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+  }
+ .cmn-toggle + label {
+    display: block;
+    position: relative;
+
+  }
+  
+ input.cmn-toggle-round + label {
+    padding: 2px;
+    width: 60px;
+
+  }
+  
+ input.cmn-toggle-round + label:before,
+ input.cmn-toggle-round + label:after {
+    display: block;
+    position: absolute;
+
+    content: "";
+  }
+ input.cmn-toggle-round + label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+
+    transition: background 0.4s;
+  }
+ input.cmn-toggle-round + label:after {
+    width: 28px;
+    background-color: #fff;
+
+    transition: margin 0.4s;
+  }
+ input.cmn-toggle-round:checked + label:before {
+    background-color: #8ce196;
+  }
+ input.cmn-toggle-round:checked + label:after {
+    margin-left: 30px;
+  }

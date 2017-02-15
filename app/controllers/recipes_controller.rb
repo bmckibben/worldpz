@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   
   # GET /recipes
@@ -42,6 +42,7 @@ class RecipesController < ApplicationController
   # PATCH/PUT /recipes/1
   # PATCH/PUT /recipes/1.json
   def update
+    #@recipe.active = 1
     respond_to do |format|
       if @recipe.update(recipe_params)
         format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
@@ -71,6 +72,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:category_id, :recipe_name, :recipe_description)
+      params.require(:recipe).permit(:category_id, :recipe_name, :recipe_description, :active, :sort_order, :prep_minutes, :cook_minutes, :servings_quantity)
     end
 end
