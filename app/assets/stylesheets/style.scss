@@ -228,9 +228,16 @@ hr {
 	margin-bottom: 3px;
 	list-style: none;
 	padding: 0;
-	font-size: 13px;
+	font-size: 16px;
+	font-weight: bold;
 	list-style-type:circle;
 }
+
+#about a:focus, #about a:hover {
+    color: #CC33FF !important;
+    text-decoration: underline;
+}
+
 
 #about i.fa {
 	float: left;
