@@ -1,0 +1,2 @@
+json.extract! recipe_ingredient_link, :id, :recipe_id, :recipe_ingredient_id, :ingredient_quantity, :recipe_ingredient_units_id, :created_at, :updated_at
+json.url recipe_ingredient_link_url(recipe_ingredient_link, format: :json)

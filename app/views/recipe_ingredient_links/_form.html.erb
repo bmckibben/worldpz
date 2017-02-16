@@ -1,0 +1,42 @@
+<%= form_for(@recipe_ingredient_link) do |f| %>
+  <% if @recipe_ingredient_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe_ingredient_link.errors.count, "error") %> prohibited this recipe_ingredient_link from being saved:</h2>
+
+      <ul>
+      <% @recipe_ingredient_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="col-md-3 col-xs-12 field">
+    <%= f.label :recipe_id %><br>
+    <%= f.collection_select :recipe_id, Recipe.all, :id, :recipe_name %>
+  </div>
+  <div class="col-md-3 col-xs-12 field">
+    <%= f.label :recipe_ingredient_id %><br>
+    <%= f.collection_select :recipe_ingredient_id, RecipeIngredient.all, :id, :ingredient_name %>
+  </div>
+  <div class="col-md-3 col-xs-12 field">
+    <%= f.label :ingredient_quantity %><br>
+    <%= f.number_field :ingredient_quantity, class: :text_field, step: :any %>
+  </div>
+  <div class="col-md-3 col-xs-12 field">
+    <%= f.label :recipe_ingredient_units_id %><br>
+    <%= f.collection_select :recipe_ingredient_units_id, RecipeIngredientsUnit.all, :id, :ingredient_unit_name %>
+  </div>
+</div>
+
+
+<div class="row">  
+  <div class="col-xs-12 actions">
+    <%= link_to 'Show', @recipe_ingredient_link,  class: "btn btn-default  pull-right" %> 
+    <%= link_to 'Back', recipe_ingredient_links_path, class: "btn btn-default  pull-right" %>
+    <%= f.submit class: "btn btn-primary pull-right" %>
+  </div>
+</div>   
+
+<% end %>

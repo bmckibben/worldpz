@@ -14,8 +14,8 @@ rails generate scaffold recipe_step recipe_id:integer step_id:integer step_order
 	has_many :recipe_steps_ingredients
 	has_many :recipe_ingredients, through: :recipe_steps_ingredients
 
-rails generate scaffold recipe_steps_ingredient step_id:integer ingredient_id:integer step_ingredient_quantity:decimal ingredient_units_id:integer
-	belongs_to :recipe_steps
+rails generate scaffold recipe_ingredient_link recipe_id:integer recipe_ingredient_id:integer ingredient_quantity:decimal recipe_ingredient_units_id:integer
+	belongs_to :recipe
 	belongs_to :recipe_ingredients
 	has_one :recipe_ingredients_units
 

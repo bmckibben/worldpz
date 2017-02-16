@@ -1,0 +1,30 @@
+<h1>Recipe Ingredient Links</h1>
+
+<hr style="width:100%">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Recipe</th>
+      <th>Recipe ingredient</th>
+      <th>Ingredient quantity</th>
+      <th>Recipe ingredient units</th>
+      <th colspan="3"><%= link_to 'New Unit', new_recipe_ingredient_link_path,  class: "btn btn-primary" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipe_ingredient_links.each do |recipe_ingredient_link| %>
+      <tr>
+        <td><%= recipe_ingredient_link.recipe_id %></td>
+        <td><%= recipe_ingredient_link.recipe_ingredient_id %></td>
+        <td><%= recipe_ingredient_link.ingredient_quantity %></td>
+        <td><%= recipe_ingredient_link.recipe_ingredient_units_id %></td>
+        <td><%= link_to recipe_ingredient_link  do %><i aria-hidden="false" class="glyphicon glyphicon-eye-open"></i><% end %></td>
+        <td><%= link_to edit_recipe_ingredient_link_path(recipe_ingredient_link)  do %><i aria-hidden="false" class="glyphicon glyphicon-pencil"></i><% end %></td>
+        <td><%= link_to recipe_ingredient_link, method: :delete, data: { confirm: 'Are you sure?' } do %><i aria-hidden="false" class="glyphicon glyphicon-trash"></i><% end %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

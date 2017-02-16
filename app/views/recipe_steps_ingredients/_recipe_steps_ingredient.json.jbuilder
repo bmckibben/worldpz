@@ -1,2 +1,0 @@
-json.extract! recipe_steps_ingredient, :id, :step_id, :ingredient_id, :step_ingredient_quantity, :ingredient_units_id, :created_at, :updated_at
-json.url recipe_steps_ingredient_url(recipe_steps_ingredient, format: :json)
