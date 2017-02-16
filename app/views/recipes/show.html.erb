@@ -11,13 +11,41 @@
 		  <% end %>
 		</div>
 		<div class="col-md-6 col-xs-12 recipe-desc">
+			<p class="recipe-description">
 			<%= @recipe.recipe_description.html_safe %>
+		</p>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-12">
+		<h3>Ingredients</h3>
+			<ol>
+		  	<% @recipe.recipe_ingredient_links.each do |ingredient| %>
+		  		<li>
+		  			<%= ingredient.ingredient_quantity %>  <%= ingredient.recipe_ingredient.ingredient_name %> <br/>
+		  			ingredient.recipe_ingredients_unit.ingredient_unit_name
+		  		</li>	
+		  	<% end %>
+		  	</ol>			
+		</div>	
+		<div class="col-md-6 col-xs-12">
+			<h3>Instructions</h3>
+			<ol>
+		  	<% @recipe.recipe_steps.each do |step| %>
+		  		<li>
+		  			<%= step.step_order %>. <%= step.step_instruction %>
+		  			
+		  		</li>	
+		  	<% end %>
+		  	</ol>			
+		</div>		
+	</div>				
+
+
 	<% else %>
 	<div class="row">	
 		<div class="col-md-12">
-			<p class="h3">Mmm, sound good, don't it? But you see I haven't actually created this one yet. Please check back at in a week or two.</p>
+			<p class="h3">Mmm, sounds good, don't it? But you see I haven't actually created this one yet. Please check back at in a week or two.</p>
 		</div>		
 	</div>	
 	<% end %>

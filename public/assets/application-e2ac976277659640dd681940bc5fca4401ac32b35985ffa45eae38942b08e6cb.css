@@ -13367,6 +13367,11 @@ input.cmn-toggle-round:checked + label:after {
   color: #0f0;
 }
 
+/* line 611, /media/sf_apps/worldpz/app/assets/stylesheets/style.scss */
+.recipe-description {
+  font-size: 22pt;
+}
+
 /* line 1, /media/sf_apps/worldpz/app/assets/stylesheets/prettyPhoto.scss */
 div.pp_default .pp_top, div.pp_default .pp_top .pp_middle, div.pp_default .pp_top .pp_left, div.pp_default .pp_top .pp_right, div.pp_default .pp_bottom, div.pp_default .pp_bottom .pp_left, div.pp_default .pp_bottom .pp_middle, div.pp_default .pp_bottom .pp_right {
   height: 13px;
