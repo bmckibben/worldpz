@@ -23,7 +23,7 @@
       <tr>
         <td><%= recipe.category_id %></td>
         <td><%= recipe.recipe_name %></td>
-        <td><%= recipe.active %></td>
+        <td><i class="fa fa-circle <% if recipe.active==0 ? "red" : "green" %>" aria-hidden="true"></i></td>
         <td><%= recipe.recipe_description.html_safe %></td>
         <td><%= recipe.sort_order %></td>
         <td><%= recipe.prep_minutes %></td>
