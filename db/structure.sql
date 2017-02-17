@@ -200,7 +200,6 @@ ALTER SEQUENCE recipe_ingredients_units_id_seq OWNED BY recipe_ingredients_units
 CREATE TABLE recipe_steps (
     id integer NOT NULL,
     recipe_id integer,
-    step_id integer,
     step_order integer,
     step_instruction character varying,
     created_at timestamp without time zone NOT NULL,
@@ -488,4 +487,6 @@ INSERT INTO schema_migrations (version) VALUES ('20170216095400');
 INSERT INTO schema_migrations (version) VALUES ('20170216150052');
 
 INSERT INTO schema_migrations (version) VALUES ('20170217090800');
+
+INSERT INTO schema_migrations (version) VALUES ('20170217110500');
 
