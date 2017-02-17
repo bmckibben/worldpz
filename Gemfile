@@ -37,6 +37,7 @@ gem 'font-awesome-sass'
 gem 'angularjs-rails', '1.5.6'
 # provides a CRSF Token Header for angularjs posts
 gem 'angular_rails_csrf', '1.0.4'
+gem 'tinymce-rails'
 
 # per heroku
 gem 'rails_12factor'

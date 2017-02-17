@@ -32,7 +32,7 @@
 <div class="row">  
   <div class="col-xs-12 field">
     <%= f.label :recipe_description %><br>
-    <%= f.text_area :recipe_description, class: "recipe-description"%><br/>
+    <%= f.text_area :recipe_description, class: "recipe-description tinymce"%><br/>
   </div>
   <div class="col-xs-12 actions">
     <%= link_to 'Show Recipe', @recipe,  class: "btn btn-default  pull-right" %> 
@@ -44,4 +44,5 @@
 </div>  
 <% end %>
 
+<%= tinymce %>
 
