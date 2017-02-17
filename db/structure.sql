@@ -106,7 +106,7 @@ CREATE TABLE recipe_ingredient_links (
     recipe_id integer,
     recipe_ingredient_id integer,
     ingredient_quantity numeric,
-    recipe_ingredient_units_id integer,
+    recipe_ingredients_unit_id integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -486,4 +486,6 @@ INSERT INTO schema_migrations (version) VALUES ('20170215143900');
 INSERT INTO schema_migrations (version) VALUES ('20170216095400');
 
 INSERT INTO schema_migrations (version) VALUES ('20170216150052');
+
+INSERT INTO schema_migrations (version) VALUES ('20170217090800');
 

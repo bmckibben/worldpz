@@ -22,8 +22,8 @@
 			<ol>
 		  	<% @recipe.recipe_ingredient_links.each do |ingredient| %>
 		  		<li>
-		  			<%= ingredient.ingredient_quantity %>  <%= ingredient.recipe_ingredient.ingredient_name %> <br/>
-		  			ingredient.recipe_ingredients_unit.ingredient_unit_name
+		  			<%= ingredient.ingredient_quantity %> <%= ingredient.recipe_ingredients_unit.ingredient_unit_name %> <%= ingredient.recipe_ingredient.ingredient_name %>
+		  			
 		  		</li>	
 		  	<% end %>
 		  	</ol>			
