@@ -34,6 +34,14 @@
     <%= f.label :recipe_description %><br>
     <%= f.text_area :recipe_description, class: "recipe-description tinymce"%><br/>
   </div>
+  <div class="col-xs-12 field">
+    <%= f.label "Image"%><br>
+    <%= f.fields_for :recipe_images do |image| %>
+      <%= image.label :image_url %><br>
+      <%= image.text_field :image_url, style: "width:100%" %>
+    <% end %>
+  </div>
+
   <div class="col-xs-12 actions">
     <%= link_to 'Show Recipe', @recipe,  class: "btn btn-default  pull-right" %> 
     <%= link_to 'Recipe List', recipes_path, class: "btn btn-default  pull-right" %>
