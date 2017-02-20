@@ -12,37 +12,37 @@
   <% end %>
 
 <div class="row">
-  <div class="col-md-2 col-xs-12 field">
+  <div class="col-md-2 col-xs-12 form-group">
     <%= f.label :category_id %><br>
-    <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}) %>
+    <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}), class: "form-control" %>
   </div>
-  <div class="col-md-2 col-xs-12 field">
+  <div class="col-md-2 col-xs-12 form-group">
     <label style="margin-bottom:10px;">Active</label><br>
     <div class="switch" >
     <%= f.check_box :active, {id:"cmn-toggle-1",  class:"cmn-toggle cmn-toggle-round"}, checked_value="1", unchecked_value="0"  %>
     <label for="cmn-toggle-1" class="pull-left"></label>
   </div>
   </div>  
-  <div class="col-md-8 col-xs-12 field">
+  <div class="col-md-8 col-xs-12 form-group">
     <%= f.label :recipe_name %><br>
-    <%= f.text_field :recipe_name, style: "width: 100%"  %>
+    <%= f.text_field :recipe_name, class: "form-control" %>
   </div>
 </div>
 
 <div class="row">  
-  <div class="col-xs-12 field">
+  <div class="col-xs-12 field form-group">
     <%= f.label :recipe_description %><br>
-    <%= f.text_area :recipe_description, class: "recipe-description tinymce"%><br/>
+    <%= f.text_area :recipe_description, class: "recipe-description, form-control"%><br/>
   </div>
-  <div class="col-xs-12 field">
+  <div class="col-xs-12 field form-group">
     <%= f.label "Image"%><br>
     <%= f.fields_for :recipe_images do |image| %>
       <%= image.label :image_url %><br>
-      <%= image.text_field :image_url, style: "width:100%" %>
+      <%= image.text_field :image_url, class: "form-control" %>
     <% end %>
   </div>
 
-  <div class="col-xs-12 actions">
+  <div class="col-xs-12 actions form-group">
     <%= link_to 'Show Recipe', @recipe,  class: "btn btn-default  pull-right" %> 
     <%= link_to 'Recipe List', recipes_path, class: "btn btn-default  pull-right" %>
 
