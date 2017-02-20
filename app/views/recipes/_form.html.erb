@@ -34,12 +34,16 @@
     <%= f.label :recipe_description %><br>
     <%= f.text_area :recipe_description, class: "recipe-description, form-control"%><br/>
   </div>
-  <div class="col-xs-12 field form-group well">
-    <%= f.label "Image"%><br>
-    <%= f.fields_for :recipe_images do |image| %>
-      <% render "recipe_image_fields", :f => image %>
-    <% end %>
-    <p><%= link_to_add_fields "Add Image", f, :recipe_images %></p>
+  <div class="col-xs-12 field form-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Image</div>
+      <div class="panel-body">
+        <%= f.fields_for :recipe_images do |image| %>
+          <% render "recipe_image_fields", :f => image %>
+        <% end %>
+      </div>
+      <div class="panel-footer"><%= link_to_add_fields "Add Image", f, :recipe_images %></div>
+    </div>
   </div>
 
   <div class="col-xs-12 actions form-group">
