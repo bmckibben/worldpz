@@ -2,7 +2,7 @@ module RecipesHelper
 
   def link_to_remove_fields(name, f)
     f.hidden_field(:_destroy) + link_to(name, "remove_fields(this)") do
-      <i aria-hidden="false" class="glyphicon glyphicon-pencil"></i>
+      "<i aria-hidden='false' class='glyphicon glyphicon-trash'></i>"
     end  
   end
   
