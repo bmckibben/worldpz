@@ -10,8 +10,8 @@
 		    <%= image_tag(image.image_url, alt: @recipe.recipe_name, class: "recipe-image" ) %>
 		  <% end %>
 		</div>
-		<div class="col-md-6 col-xs-12 recipe-desc">
-			<p>
+		<div class="col-md-6 col-xs-12">
+			<p class="recipe-desc">
 			<%= @recipe.recipe_description.html_safe %>
 		</p>
 		</div>
