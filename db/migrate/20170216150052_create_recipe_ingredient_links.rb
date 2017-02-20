@@ -4,7 +4,7 @@ class CreateRecipeIngredientLinks < ActiveRecord::Migration
       t.integer :recipe_id
       t.integer :recipe_ingredient_id
       t.decimal :ingredient_quantity
-      t.integer :recipe_ingredient_units_id
+      t.integer :recipe_ingredients_unit_id
 
       t.timestamps null: false
     end
