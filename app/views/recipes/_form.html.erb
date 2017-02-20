@@ -37,7 +37,7 @@
   <div class="col-xs-12 field form-group well">
     <%= f.label "Image"%><br>
     <%= f.fields_for :recipe_images do |image| %>
-      <% render "image_fields", :f => image %>
+      <% render "recipe_image_fields", :f => image %>
     <% end %>
     <p><%= link_to_add_fields "Add Image", f, :recipe_images %></p>
   </div>
