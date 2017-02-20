@@ -12,7 +12,7 @@
   <% end %>
 
 <div class="row">
-  <div class="col-md-2 col-xs-12 form-group">
+  <div class="col-md-3 col-xs-12 form-group">
     <%= f.label :category_id %><br>
     <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}, {class: "form-control"}) %>
   </div>
@@ -23,7 +23,7 @@
     <label for="cmn-toggle-1" class="pull-left"></label>
   </div>
   </div>  
-  <div class="col-md-8 col-xs-12 form-group">
+  <div class="col-md-7 col-xs-12 form-group">
     <%= f.label :recipe_name %><br>
     <%= f.text_field :recipe_name, class: "form-control" %>
   </div>
