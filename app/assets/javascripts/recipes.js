@@ -15,4 +15,5 @@ $(document).on("click", "a.link_to_add_fields", function(e){
         var association = $(this).data("association");
         var content = $(this).data("content");
         add_fields(link, association, content);
+
 });
