@@ -97260,6 +97260,13 @@ $(document).on("click", "a.link_to_add_fields", function(e){
         add_fields(link, association, content);
 
 });
+
+$(document).on("click", "a.link_to_remove_fields", function(e){
+        e.preventDefault();
+        var link = $(this);
+        remove_fields(link);
+
+});
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //

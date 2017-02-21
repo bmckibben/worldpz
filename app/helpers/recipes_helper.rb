@@ -1,7 +1,7 @@
 module RecipesHelper
 
   def link_to_remove_fields(name, f)
-    f.hidden_field(:_destroy) + link_to("<i aria-hidden='false' class='glyphicon glyphicon-trash'></i>".html_safe, "remove_fields(this)") 
+    link_to("<i aria-hidden='false' class='glyphicon glyphicon-trash'></i>".html_safe, "#", :class => "link_to_remove_fields") +f.hidden_field(:_destroy)
   end
   
   def link_to_add_fields(name, f, association)
