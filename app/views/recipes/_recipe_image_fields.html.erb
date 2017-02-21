@@ -1,4 +1,5 @@
 <div class="fields" style="white-space: nowrap;">
       <%= f.text_field :image_url, class: "form-control", style: "width:80%" %>
-	  <%= link_to_remove_fields "", f %>
+      <%= f.check_box :_destroy %>
+      <%= f.label :_destroy, "Remove" %>
 </div>     
