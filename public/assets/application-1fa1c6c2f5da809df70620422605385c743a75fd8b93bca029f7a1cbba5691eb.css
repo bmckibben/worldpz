@@ -12812,7 +12812,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 /* line 194, /var/www/worldpz/app/assets/stylesheets/style.scss */
 .recipe-desc {
   font-family: "Times New Roman", Georgia, Serif;
-  font-size: 22pts;
+  font-size: 24px;
 }
 
 /* line 199, /var/www/worldpz/app/assets/stylesheets/style.scss */
