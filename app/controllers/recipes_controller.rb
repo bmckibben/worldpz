@@ -76,6 +76,6 @@ class RecipesController < ApplicationController
         :active, :sort_order, :prep_minutes, :cook_minutes, :servings_quantity,
         recipe_images_attributes: [:id, :image_url, :_destroy],
         recipe_steps_attributes: [:id, :step_order, :step_instruction, :_destroy],
-        recipe_ingredient_links_attributes: [:id, :recipe_id, :recipe_ingredient_id, :ingredient_quantity, :recipe_ingredient_units_id, :_destroy])
+        recipe_ingredient_links_attributes: [:id, :recipe_id, :recipe_ingredient_id, :ingredient_quantity, :recipe_ingredients_units_id, :_destroy])
     end
 end

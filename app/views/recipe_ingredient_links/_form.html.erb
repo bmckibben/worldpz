@@ -25,7 +25,7 @@
     <%= f.number_field :ingredient_quantity, class: :text_field, step: :any %>
   </div>
   <div class="col-md-3 col-xs-12 field">
-    <%= f.label :recipe_ingredient_units_id %><br>
+    <%= f.label :recipe_ingredients_units_id %><br>
     <%= f.collection_select :recipe_ingredients_unit_id, RecipeIngredientsUnit.all, :id, :ingredient_unit_name %>
   </div>
 </div>
