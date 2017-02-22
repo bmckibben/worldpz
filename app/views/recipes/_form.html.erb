@@ -17,10 +17,10 @@
     <%= collection_select(:category_id, 0, RecipeCategory.all, :id, :category_name, {selected: @recipe.category_id}, {class: "form-control"}) %>
   </div>
   <div class="col-md-2 col-xs-12 form-group">
-    <label style="margin-bottom:10px;">Publish</label><br>
+    <label style="margin-bottom:10px; class="pull-right"">Publish</label><br>
     <div class="switch" >
     <%= f.check_box :active, {id:"cmn-toggle-1",  class:"cmn-toggle cmn-toggle-round"}, checked_value="1", unchecked_value="0"  %>
-    <label for="cmn-toggle-1" class="pull-left"></label>
+    <label for="cmn-toggle-1"></label>
   </div>
   </div>  
   <div class="col-md-7 col-xs-12 form-group">

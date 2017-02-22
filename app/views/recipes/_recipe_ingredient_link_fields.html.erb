@@ -1,18 +1,15 @@
 <div class="row fields">
-  <div class="col-md-3 col-xs-12 field">
-    <%= f.label :recipe_id %><br>
-    <%= f.collection_select :recipe_id, Recipe.all, :id, :recipe_name %>
-  </div>
-  <div class="col-md-3 col-xs-12 field">
-    <%= f.label :recipe_ingredient_id %><br>
-    <%= f.collection_select :recipe_ingredient_id, RecipeIngredient.all, :id, :ingredient_name %>
-  </div>
-  <div class="col-md-3 col-xs-12 field">
+  <div class="col-md-2 col-xs-12 field">
     <%= f.label :ingredient_quantity %><br>
     <%= f.number_field :ingredient_quantity, class: :text_field, step: :any %>
+    <%= link_to_remove_fields "", f %>
   </div>
   <div class="col-md-3 col-xs-12 field">
     <%= f.label :recipe_ingredient_units_id %><br>
     <%= f.collection_select :recipe_ingredients_unit_id, RecipeIngredientsUnit.all, :id, :ingredient_unit_name %>
   </div>
+  <div class="col-md-7 col-xs-12 field">
+    <%= f.label :recipe_ingredient_id %><br>
+    <%= f.collection_select :recipe_ingredient_id, RecipeIngredient.all, :id, :ingredient_name %>
+  </div>  
 </div>  
