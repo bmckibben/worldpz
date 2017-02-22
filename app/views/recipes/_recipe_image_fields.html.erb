@@ -1,4 +1,8 @@
-<div class="fields" style="white-space: nowrap;">
-      <%= f.text_field :image_url,  class: "form-control", style: "width:90%;" %>
-      <%= link_to_remove_fields "", f %>
-</div>     
+<div class="row fields">
+  <div class="col-md-11 col-xs-12 field">
+      <%= f.text_field :image_url,  class: "form-control" %>    
+  </div>
+  <div class="col-md-1 col-xs-12 field">
+    <%= link_to_remove_fields "", f %>
+  </div>  
+</div> 
