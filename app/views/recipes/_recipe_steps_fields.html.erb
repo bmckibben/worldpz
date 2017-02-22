@@ -1,0 +1,13 @@
+<div class="row fields">
+  <div class="col-md-4 col-xs-12 field">
+    <%= f.label :recipe_id %><br>
+    <%= f.collection_select :recipe_id, Recipe.all, :id, :recipe_name %><br/>
+    <%= f.label :step_order %><br>
+    <%= f.number_field :step_order %>
+    <%= link_to_remove_fields "", f %>
+  </div>
+  <div class="col-md-8 col-xs-12 field">
+    <%= f.label :step_instruction %><br>
+    <%= f.text_area :step_instruction, class: "recipe-description"%>
+  </div>  
+</div>     

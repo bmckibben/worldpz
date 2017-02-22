@@ -46,6 +46,30 @@
     </div>
   </div>
 
+  <div class="col-xs-12 form-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Ingredients</div>
+      <div class="panel-body">
+        <%= f.fields_for :recipe_ingredient_links do |ingredient| %>
+          <% render "recipe_ingredient_link_fields", :f => ingredient %>
+        <% end %>
+        <p style="margin-top:1em;"><%= link_to_add_fields "Add Ingredient", f, :recipe_ingredient_links %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 form-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Steps</div>
+      <div class="panel-body">
+        <%= f.fields_for :recipe_steps do |step| %>
+          <% render "recipe_step_fields", :f => step %>
+        <% end %>
+        <p style="margin-top:1em;"><%= link_to_add_fields "Add Step", f, :recipe_steps %></p>
+      </div>
+    </div>
+  </div>
+
   <div class="col-xs-12 actions form-group">
     <%= link_to 'Show Recipe', @recipe,  class: "btn btn-default  pull-right" %> 
     <%= link_to 'Recipe List', recipes_path, class: "btn btn-default  pull-right" %>
