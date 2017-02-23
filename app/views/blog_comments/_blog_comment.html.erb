@@ -1,0 +1,14 @@
+<li>
+  <%= blog_comment.body %> -
+  <small>Submitted <%= time_ago_in_words(blog_comment.created_at) %> ago</small>
+
+  <%= form_for [blog_comment, BlogComment.new] do |f| %>
+      <%= f.text_area :body, placeholder: "Add a Reply" %><br/>
+      <%= f.submit "Reply"  %>
+      <% end %>
+
+  <ul>
+      <%= render partial: 'blog_comments/blog_comment', collection: blog_comment.blog_comments %>
+  </ul>
+
+</li>
