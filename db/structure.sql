@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.2
--- Dumped by pg_dump version 9.6.2
+-- Dumped from database version 9.5.5
+-- Dumped by pg_dump version 9.5.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -43,9 +42,9 @@ CREATE TABLE blog_comments (
     body text,
     commentable_id integer,
     commentable_type character varying,
+    publish integer DEFAULT 0 NOT NULL,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    publish integer DEFAULT 0 NOT NULL
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -74,9 +73,9 @@ ALTER SEQUENCE blog_comments_id_seq OWNED BY blog_comments.id;
 
 CREATE TABLE blogs (
     id integer NOT NULL,
-    title character varying,
+    title character varying NOT NULL,
     body text,
-    publish integer,
+    publish integer DEFAULT 0 NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -99,39 +98,6 @@ CREATE SEQUENCE blogs_id_seq
 --
 
 ALTER SEQUENCE blogs_id_seq OWNED BY blogs.id;
-
-
---
--- Name: comments; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE comments (
-    id integer NOT NULL,
-    body text,
-    commentable_id integer,
-    commentable_type character varying,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
-);
-
-
---
--- Name: comments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE comments_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE comments_id_seq OWNED BY comments.id;
 
 
 --
@@ -416,84 +382,77 @@ ALTER SEQUENCE users_id_seq OWNED BY users.id;
 
 
 --
--- Name: blog_comments id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY blog_comments ALTER COLUMN id SET DEFAULT nextval('blog_comments_id_seq'::regclass);
 
 
 --
--- Name: blogs id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY blogs ALTER COLUMN id SET DEFAULT nextval('blogs_id_seq'::regclass);
 
 
 --
--- Name: comments id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY comments ALTER COLUMN id SET DEFAULT nextval('comments_id_seq'::regclass);
-
-
---
--- Name: recipe_categories id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_categories ALTER COLUMN id SET DEFAULT nextval('recipe_categories_id_seq'::regclass);
 
 
 --
--- Name: recipe_images id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_images ALTER COLUMN id SET DEFAULT nextval('recipe_images_id_seq'::regclass);
 
 
 --
--- Name: recipe_ingredient_links id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredient_links ALTER COLUMN id SET DEFAULT nextval('recipe_ingredient_links_id_seq'::regclass);
 
 
 --
--- Name: recipe_ingredients id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients ALTER COLUMN id SET DEFAULT nextval('recipe_ingredients_id_seq'::regclass);
 
 
 --
--- Name: recipe_ingredients_units id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients_units ALTER COLUMN id SET DEFAULT nextval('recipe_ingredients_units_id_seq'::regclass);
 
 
 --
--- Name: recipe_steps id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps ALTER COLUMN id SET DEFAULT nextval('recipe_steps_id_seq'::regclass);
 
 
 --
--- Name: recipes id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipes ALTER COLUMN id SET DEFAULT nextval('recipes_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
 
 
 --
--- Name: blog_comments blog_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: blog_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY blog_comments
@@ -501,7 +460,7 @@ ALTER TABLE ONLY blog_comments
 
 
 --
--- Name: blogs blogs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: blogs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY blogs
@@ -509,15 +468,7 @@ ALTER TABLE ONLY blogs
 
 
 --
--- Name: comments comments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY comments
-    ADD CONSTRAINT comments_pkey PRIMARY KEY (id);
-
-
---
--- Name: recipe_categories recipe_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_categories
@@ -525,7 +476,7 @@ ALTER TABLE ONLY recipe_categories
 
 
 --
--- Name: recipe_images recipe_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_images_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_images
@@ -533,7 +484,7 @@ ALTER TABLE ONLY recipe_images
 
 
 --
--- Name: recipe_ingredient_links recipe_ingredient_links_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_ingredient_links_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredient_links
@@ -541,7 +492,7 @@ ALTER TABLE ONLY recipe_ingredient_links
 
 
 --
--- Name: recipe_ingredients recipe_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_ingredients_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients
@@ -549,7 +500,7 @@ ALTER TABLE ONLY recipe_ingredients
 
 
 --
--- Name: recipe_ingredients_units recipe_ingredients_units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_ingredients_units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_ingredients_units
@@ -557,7 +508,7 @@ ALTER TABLE ONLY recipe_ingredients_units
 
 
 --
--- Name: recipe_steps recipe_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipe_steps_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipe_steps
@@ -565,7 +516,7 @@ ALTER TABLE ONLY recipe_steps
 
 
 --
--- Name: recipes recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recipes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY recipes
@@ -573,7 +524,7 @@ ALTER TABLE ONLY recipes
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY users
@@ -635,11 +586,7 @@ INSERT INTO schema_migrations (version) VALUES ('20170217090800');
 
 INSERT INTO schema_migrations (version) VALUES ('20170217110500');
 
-INSERT INTO schema_migrations (version) VALUES ('20170223124300');
-
 INSERT INTO schema_migrations (version) VALUES ('20170223134142');
-
-INSERT INTO schema_migrations (version) VALUES ('20170223134300');
 
 INSERT INTO schema_migrations (version) VALUES ('20170223134800');
 
