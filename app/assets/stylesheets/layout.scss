@@ -331,3 +331,8 @@ body, html {
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity;
 }
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+

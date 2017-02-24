@@ -14395,6 +14395,11 @@ body, html {
   transition-property: transform, opacity;
 }
 
+/* line 335, /media/sf_apps/worldpz/app/assets/stylesheets/layout.scss */
+.no-bottom-margin {
+  margin-bottom: 0;
+}
+
 /* line 1, /media/sf_apps/worldpz/app/assets/stylesheets/home.scss */
 .carousel,
 .item,
@@ -15129,4 +15134,20 @@ label {
 /* line 111, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .btn {
   font-family: Rokkitt, Verdana, sans-serif;
+}
+
+/* line 115, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 5, /media/sf_apps/worldpz/app/assets/stylesheets/blogs.scss */
+#blog-display ul {
+  margin-left: 3em;
+}
+
+/* line 9, /media/sf_apps/worldpz/app/assets/stylesheets/blogs.scss */
+#blog-display .text-area-input-btn {
+  height: auto !important;
+  margin: 0;
 }
