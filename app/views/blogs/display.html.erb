@@ -1,31 +1,7 @@
 <div class="row" id="blog-display">
 <div class="col-md-6 col-md-offset-3 col-xs-12">
 
-<h1><%= @blog.title %></h1>
-<hr style="width:100%">
-
-<div class="panel panel-default no-bottom-margin">
-    <div class="panel-body">
-		<%= @blog.body %>
-	</div>
-</div>
-<small>Submitted <%= time_ago_in_words(@blog.created_at) %> ago</small>
-
-<h2>Comments</h2>
-
-<%= form_for [@blog, BlogComment.new] do |f| %>
-  	<div class="input-group">
-      	<%= f.text_area :body, placeholder: "Post a Comment", class: "form-control" %>
-  		<span class="input-group-btn">
-  			<%= f.submit "Post", class: "btn btn-default text-area-input-btn"  %>
-  		</span>	      	
-    </div>
-<% end %>
-
-<h3>Previous Comments</h3>
-<ul>
-  <%= render(partial: 'blog_comments/blog_comment', collection: @blog.blog_comments) %>
-</ul>
+<%= render 'display' %>
 
 </div>
 </div>
