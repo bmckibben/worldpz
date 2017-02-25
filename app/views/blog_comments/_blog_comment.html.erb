@@ -1,7 +1,9 @@
 <li>
   <%= blog_comment.body %> -
   <small>Submitted <%= time_ago_in_words(blog_comment.created_at) %> ago</small>
+  <span class='glyphicon glyphicon-comment annotate-group' id='comment-<%= blog_comment.id %>' data-id='<%= blog_comment.id %>' style='font-size:18px;color:#00cc00;cursor:pointer;' title="Reply" > </span>
 
+  <div id="reply_<%= blog_comment.id %>" style="display:none;">
   <%= form_for [blog_comment, BlogComment.new] do |f| %>
   	<div class="input-group">
       	<%= f.text_area :body, placeholder: "Post a Reply", class: "form-control" %>
@@ -11,7 +13,7 @@
     </div>  	
       
   <% end %>
-
+</div>
   <ul>
       <%= render partial: 'blog_comments/blog_comment', collection: blog_comment.blog_comments %>
   </ul>

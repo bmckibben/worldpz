@@ -45481,6 +45481,13 @@ if (isMouseWheelSupported && isChrome) {
 };
 
 })();
+$(document).ready(function() {
+
+	$(".annotate-group").on("click", function(e) {
+		var id = $(this).data('id');
+		$("#reply_"+id).toggle();
+	});	
+});
 angular.module('appContact', [])
 .controller("ctlrContact", function($scope, $http, $interval){
  
