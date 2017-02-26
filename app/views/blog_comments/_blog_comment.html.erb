@@ -1,7 +1,7 @@
 <li>
   <%= blog_comment.body %> -
   <small>Submitted <%= time_ago_in_words(blog_comment.created_at) %> ago</small>
-  <span class='glyphicon glyphicon-comment annotate-group' id='comment-<%= blog_comment.id %>' data-id='<%= blog_comment.id %>' style='font-size:18px;color:#00cc00;cursor:pointer;' title="Reply" > </span>
+  <i class='fa fa-reply annotate-group' id='comment-<%= blog_comment.id %>' data-id='<%= blog_comment.id %>' style='font-size:18px;color:#cc0000;cursor:pointer;' title="Reply" > </i>
 
   <div id="reply_<%= blog_comment.id %>" style="display:none;">
   <%= form_for [blog_comment, BlogComment.new] do |f| %>
