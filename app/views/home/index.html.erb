@@ -298,11 +298,12 @@
     <div class="section-title center">
       <h2 style="text-align:center;">Blog</h2>
       <hr>
-      <small style="text-align:center;">This is a moderated blog. Replies will be published at the descretion of the owner</small>
+      <p style="text-align:center;">This is a moderated blog. Replies will be published at the descretion of the owner.</p>
     </div>
     <div id="row">
       <div class="col-xs-12 col-md-3">
         <h3>Past Entries</h3>
+         <%= render 'blogs/list' %>
       </div> 
       <div class="col-xs-12 col-md-9">
         <%= render 'blogs/display' %>

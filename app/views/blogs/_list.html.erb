@@ -1,0 +1,4 @@
+<% @blogs.each do |blog| %>
+   <p><%= link_to blog.title, display_blog_path(blog) %><br/>
+   <small><%= time_ago_in_words(blog.created_at) %> ago</small></p>
+<% end %>

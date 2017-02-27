@@ -13,7 +13,7 @@ angular.module('appBlogReply', [])
       $scope.postReply = function(id,body){
                  
             $http.post("/blog_comments/create",  
-                  {"body":body,"commentable_id":parent_id }
+                  {"utf8":utf8,"authenticity_token":authenticity_token, "body":body }
                   )
                   .success(function(data){
                               alert("Your reply has been sent! It will be published if approved.");

@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   def index
     @recipes = Recipe.where("category_id = 1 and sort_order > 0").order(:sort_order)
     @blog = Blog.order(created_at: :desc).first
+    @blogs = Blog.where("publish=1").order(created_at: :desc).limit(5)
   	render layout: false
   end
   
