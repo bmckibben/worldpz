@@ -10,17 +10,22 @@
 
 <h3>Add Comment</h3>
 
+<div ng-controller="ctlrComment">
+  <form ng-class="form" ng-submit="postReply(utf8,authenticity_token,blog_id,body)">
     <%= form_for [@blog, BlogComment.new], html: {name: "newBlogComment", "novalidate" => true, onsubmit: "return false;"}  do |f|%>
       	<div class="input-group">
           	<%= f.text_area :body, placeholder: "Post a Comment", class: "form-control" %>
       		<span class="input-group-btn">
-      			<%= f.submit "Post", class: "btn btn-default text-area-input-btn", style: "height:100% !important;"  %>
+            <%= f.hidden_field :blog_id, :value=>"#{@blog.id}" %>
+      			<%= f.submit "Post", class: "btn btn-default text-area-input-btn", style: "height:100% !important;border:none;"  %>
       		</span>	      	
         </div>
     <% end %>
+</div>
 
+<% if @blog.blog_comments.size > 0 %>
 <h3>Previous Comments</h3>
 <ul>
   <%= render(partial: 'blog_comments/blog_comment', collection: @blog.blog_comments) %>
 </ul>
-
+<% end %>

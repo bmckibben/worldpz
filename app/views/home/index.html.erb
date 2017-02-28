@@ -95,7 +95,9 @@
               <li><a href="https://www.amnesty.org" target="_blank" title="Amnesty International">Amnesty International</a></li>
               <li><a href="https://www.heifer.org" target="_blank" title="Heifer International">Heifer International</a></li>
             </ul>
-          </p>  
+          </p> 
+          <p>I would create an international chain of resturants, like Hard Rock Cafe, that would promote world peace. It would be a non-profit entity whose profits would be donated to charity. 
+          </p> 
         </div>
       </div>
     </div>
@@ -292,22 +294,23 @@
   </div>
 </div>
 
+<div data-ng-app="appHome">
 <!-- Blog Section -->
 <div id="blog-display">
   <div class="container">
     <div class="section-title center">
       <h2 style="text-align:center;">Blog</h2>
       <hr>
-      <p style="text-align:center;">This is a moderated blog. Replies will be published at the descretion of the owner.</p>
+      <p style="text-align:center;">This is a moderated blog. Comments and replies will be published at the descretion of the owner.</p>
     </div>
     <div id="row">
-      <div class="col-xs-12 col-md-3">
+      <div class="col-xs-12 col-md-2">
         <h3>Past Entries</h3>
          <%= render 'blogs/list' %>
       </div> 
-      <div class="col-xs-12 col-md-9">
+      <div class="col-xs-12 col-md-8">
         <%= render 'blogs/display' %>
-      </div>       
+      </div> 
     </div>
   </div>
 </div>
@@ -319,13 +322,10 @@
     <div class="section-title center">
       <h2>Contact us</h2>
       <hr>
-      <p>Use the form below to send me a message.</p>
     </div>
-    <div class="clearfix"></div>
     <div class="col-md-8 col-md-offset-2">
-      <h3>Leave us a message</h3>
-<div data-ng-app="appContact">
-  <div ng-controller="ctlrContact">
+      <h3>Use this form to send me a message.</h3>
+    <div ng-controller="ctlrContact">  
     <form ng-class="form" ng-submit="sendEmail(email_name,email_address,email_message)">  
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="row">
@@ -349,8 +349,8 @@
         <div id="success"></div>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
-    </div>
-  </div>
+      </div>
+
       <div class="social">
         <h3>Follow World Pz</h3>
         <ul>
@@ -362,6 +362,8 @@
     </div>
   </div>
 </div>
+
+</div> <!-- ng -->
 <%= render 'layouts/footer' %>  
 
 </body>

@@ -116,6 +116,15 @@ small {
   font-size: 75%;
 }
 
-.input-group-btn {
-  background-color: #5B1212;
+#blog-display .input-group-btn {
+  border: 1px solid #ddd;
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; 
+  background: #f6f8f9; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f6f8f9 0%, #e5ebee 50%, #e5e5e5 55%, #bfc5c9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#e5e5e5 55%,#bfc5c9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #f6f8f9 0%,#e5ebee 50%,#e5e5e5 55%,#bfc5c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#bfc5c9',GradientType=0 ); /* IE6-9 */
 }
+

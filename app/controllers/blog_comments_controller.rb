@@ -1,6 +1,6 @@
 class BlogCommentsController < ApplicationController
   before_action :set_blog_comment, only: [:show, :edit, :update, :destroy]
-  before_action :find_commentable, only: [:create]
+  before_action :find_commentable, only: [:create, :post_blog_comment]
 
   # GET /blog_comments
   # GET /blog_comments.json
@@ -30,12 +30,23 @@ class BlogCommentsController < ApplicationController
     respond_to do |format|
       if @blog_comment.save
         format.html { redirect_to @blog_comment, notice: 'Blog comment was successfully created.' }
-        format.json { render :show, status: :created, location: @blog_comment }
+        format.json { render :nothing => true, :status => 200}
       else
         format.html { render :new }
-        format.json { render json: @blog_comment.errors, status: :unprocessable_entity }
+        format.json { render :nothing => true, status: :unprocessable_entity }
       end
     end
+  end
+
+  # POST /post_blog_comment
+  # POST /post_blog_comment.json
+  def post_blog_comment
+    #@blog_comment = BlogComment.new(params[:body], params[:commentable_id])
+    #@blog_comment.commentable_type = "Reply"
+    #@blog_comment.publish = 0 #do not publish until reviewed
+    @blog_comment = @commentable.blog_comments.new(blog_comment_params)
+    @blog_comment.save
+    render :nothing => true, :status => 200
   end
 
   # PATCH/PUT /blog_comments/1
