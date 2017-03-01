@@ -18,8 +18,10 @@ angular.module('appHome', [])
 .controller("ctlrComment", function($scope, $http, $interval){
  
       $scope.postReply = function(utf8,authenticity_token,blog_id,body){
-            var params = parameter = JSON.stringify( {"utf8":utf8,"authenticity_token":authenticity_token,  "blog_id":blog_id, "body":body })    
-            $http.post("/blog_comments", params )
+  
+            $http.post("/blog_comments", 
+                  {"utf8":utf8,"authenticity_token":authenticity_token,  "blog_id":blog_id, "body":body } 
+                  )
                   .success(function(data){
                               alert("Your reply has been sent! It will be published if approved.");
                   })

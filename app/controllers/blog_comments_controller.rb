@@ -26,7 +26,7 @@ class BlogCommentsController < ApplicationController
   # POST /blog_comments.json
   def create
     @blog_comment = @commentable.blog_comments.new(blog_comment_params)
-
+    
     respond_to do |format|
       if @blog_comment.save
         format.html { redirect_to @blog_comment, notice: 'Blog comment was successfully created.' }
@@ -85,6 +85,7 @@ class BlogCommentsController < ApplicationController
     end
 
     def find_commentable
+     
       @commentable = BlogComment.find_by_id(params[:blog_comment_id]) if params[:blog_comment_id]
       @commentable = Blog.find_by_id(params[:blog_id]) if params[:blog_id]
     end

@@ -14,9 +14,9 @@
   <form ng-class="form" ng-submit="postReply(utf8,authenticity_token,blog_id,body)">
     <%= form_for [@blog, BlogComment.new], html: {name: "newBlogComment", "novalidate" => true, onsubmit: "return false;"}  do |f|%>
       	<div class="input-group">
-          	<%= f.text_area :body, placeholder: "Post a Comment", class: "form-control" %>
+          	<%= f.text_area :body, placeholder: "Post a Comment", class: "form-control", html: "ng-model='body'" %>
       		<span class="input-group-btn">
-            <%= f.hidden_field :blog_id, :value=>"#{@blog.id}" %>
+            <%= f.hidden_field :blog_id, :value=>"#{@blog.id}", html: "ng-model='blog_id'" %>
       			<%= f.submit "Post", class: "btn btn-default text-area-input-btn", style: "height:100% !important;border:none;"  %>
       		</span>	      	
         </div>
