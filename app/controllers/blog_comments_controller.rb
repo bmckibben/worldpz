@@ -27,6 +27,9 @@ class BlogCommentsController < ApplicationController
   def create
     @blog_comment = @commentable.blog_comments.new(blog_comment_params)
     
+    # default publish flage to 0
+    @blog_comment.publish = 0
+    
     respond_to do |format|
       if @blog_comment.save
         format.html { redirect_to @blog_comment, notice: 'Blog comment was successfully created.' }

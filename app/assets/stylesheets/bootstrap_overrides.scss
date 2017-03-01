@@ -120,6 +120,7 @@ right: -15px;
 
 .btn {
   font-family: Rokkitt, Verdana, sans-serif;
+  font-weight: bold;
 }
 
 small {
@@ -142,6 +143,9 @@ small {
 @media (max-width: 768px) {
 .navbar-header {
   max-width:100%;
+}
+.navbar-brand img {
+  max-width:166px;
 }
 }
 /* ------------------------------------------------------ */

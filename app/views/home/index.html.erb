@@ -40,6 +40,7 @@
         
         <li> <a class="page-scroll" href="#contact">Contact</a> </li>
         <% if user_signed_in? %>
+            <li><%= link_to 'Admin', admin_path %></li>
             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
         <% else %>
             <li><%= link_to 'Login', admin_path %></li>
@@ -307,7 +308,7 @@
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         <%= render 'blogs/display' %>
       </div> 
-      <div class="col-xs-12 col-md-2">
+      <div class="col-xs-12 col-md-2" style="padding-left:3em;">
         <h3>Past Entries</h3>
          <%= render 'blogs/list' %>
       </div>       
@@ -347,7 +348,7 @@
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
-        Wi
+        <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
       </div>
 
