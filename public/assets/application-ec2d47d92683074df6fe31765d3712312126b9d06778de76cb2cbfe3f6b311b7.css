@@ -15026,17 +15026,29 @@ img.img-thumbnail.team-img {
 
 /* line 8, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .navbar-header {
-  height: 50px;
+  max-width: 20%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-/* line 12, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 14, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+.navbar-toggle {
+  float: right;
+}
+
+/* line 18, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+.navbar-collapse {
+  max-width: 80%;
+}
+
+/* line 22, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .navbar-brand {
   padding: 0;
   margin-right: 0;
   height: 40px;
 }
 
-/* line 19, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 29, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .navbar-brand img {
   width: 100%;
   height: auto;
@@ -15044,54 +15056,54 @@ img.img-thumbnail.team-img {
   max-height: 40px;
 }
 
-/* line 26, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 36, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 30, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 40, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 textarea {
   color: #555555;
 }
 
-/* line 34, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 44, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 th {
   font-weight: bold;
 }
 
-/* line 38, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 48, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .main-content {
   margin-top: 20px;
 }
 
-/* line 42, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 52, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .alert {
   margin: 1em;
   padding: 1em;
 }
 
-/* line 47, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 57, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .alert-danger, #error_explanation, .alert-error, .alert-success {
   border: none;
 }
 
-/* line 52, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 62, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .close {
   color: #000;
 }
 
-/* line 56, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 66, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .border-right {
   border-right: 1px solid #fff;
 }
 
-/* line 60, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 70, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .well {
   background-color: transparent;
   border: none;
 }
 
-/* line 65, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 75, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .btn {
   margin: 0.5em;
   font-family: Verdana, Geneva, sans-serif;
@@ -15108,53 +15120,53 @@ th {
   margin-top: 0;
 }
 
-/* line 82, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 92, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 label {
   color: #000;
 }
 
-/* line 86, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 96, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 4;
 }
 
-/* line 90, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 100, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child), .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 4;
 }
 
-/* line 94, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 104, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .main-margined {
   margin: 10px;
 }
 
-/* line 98, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 108, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .input-group {
   width: 100%;
 }
 
-/* line 102, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 112, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .alert-dismissable .close, .alert-dismissible .close {
   top: -15px;
   right: -15px;
 }
 
-/* line 107, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 117, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .actions {
   margin-top: 2em;
 }
 
-/* line 111, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 121, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .btn {
   font-family: Rokkitt, Verdana, sans-serif;
 }
 
-/* line 115, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 125, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 small {
   font-size: 75%;
 }
 
-/* line 119, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+/* line 129, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 #blog-display .input-group-btn {
   border: 1px solid #ddd;
   border-left: none;
@@ -15171,3 +15183,12 @@ small {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#bfc5c9',GradientType=0 );
   /* IE6-9 */
 }
+
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+  /* line 143, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
+  .navbar-header {
+    max-width: 100%;
+  }
+}
+/* ------------------------------------------------------ */

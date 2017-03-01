@@ -6,7 +6,17 @@
 }
 
 .navbar-header {
-  height: 50px;
+  max-width:20%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navbar-toggle {
+  float: right;
+}
+
+.navbar-collapse {
+  max-width:80%;
 }
 
 .navbar-brand {
@@ -128,3 +138,10 @@ small {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#bfc5c9',GradientType=0 ); /* IE6-9 */
 }
 
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+.navbar-header {
+  max-width:100%;
+}
+}
+/* ------------------------------------------------------ */
