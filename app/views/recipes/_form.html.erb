@@ -41,7 +41,7 @@
         <%= f.fields_for :recipe_images do |image| %>
           <% render "recipe_image_fields", :f => image %>
         <% end %>
-        <p style="margin-top:1em;"><%= link_to_add_fields "Add Image", f, :recipe_images %></p>
+        <p style="margin-top:1em;"><%= link_to_add_fields "New Image", f, :recipe_images %></p>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@
         <%= f.fields_for :recipe_ingredient_links do |ingredient| %>
           <% render "recipe_ingredient_link_fields", :f => ingredient %>
         <% end %>
-        <p style="margin-top:1em;"><%= link_to_add_fields "Add Ingredient", f, :recipe_ingredient_links %></p>
+        <p style="margin-top:1em;"><%= link_to_add_fields "New Ingredient", f, :recipe_ingredient_links %></p>
       </div>
     </div>
   </div>
@@ -65,7 +65,7 @@
         <%= f.fields_for :recipe_steps do |step| %>
           <% render "recipe_step_fields", :f => step %>
         <% end %>
-        <p style="margin-top:1em;"><%= link_to_add_fields "Add Step", f, :recipe_steps %></p>
+        <p style="margin-top:1em;"><%= link_to_add_fields "New Step", f, :recipe_steps %></p>
       </div>
     </div>
   </div>
