@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <%= favicon_link_tag 'favicon.ico' %> 
-<title>** World Pz **</title>
-<meta name="description" content="The professional website of Ben McKibben">
+<title>** World-Pz **</title>
+<meta name="keywords" content="World Peace World-Pz Socially Responsible Pizza">
+<meta name="description" content="Promoting World Peace through Socially Responsible Pizza">
 <meta name="author" content="Ben McKibben">
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -97,7 +98,7 @@
               <li><a href="https://www.heifer.org" target="_blank" title="Heifer International">Heifer International</a></li>
             </ul>
           </p> 
-          <p>I would create an international chain of resturants, like Hard Rock Cafe, that would promote world peace. It would be a non-profit entity whose profits would be donated to charity. 
+          <p>I would like to create an international chain of resturants, like Hard Rock Cafe, that would promote world peace. It would be a non-profit entity whose profits would be donated to charity. When I win the lottery.
           </p> 
         </div>
       </div>
@@ -124,7 +125,7 @@
           </div>
           <div class="col-sm-4">
             <blockquote class="testimonial-well"><i class="fa fa-quote-left"></i>
-              <p>If you truely want to make the world a better place, teach your children how to love.</p>
+              <p>You truely can make the world a better place. Teach your children how to love.</p>
               <div class="clients-name">
                 <p><strong>Paxxa</strong></p>
               </div>
@@ -241,6 +242,18 @@
     </div>
     <div class="space"></div>
     <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12" >
+        <div class="service">
+          <h3><%= link_to "Dough!", recipe_path(13)  %> </h3>
+          <p>You can&apos;t build anything without a good foundation.</p>
+        </div>
+      </div> 
+      <div class="col-md-3 col-sm-6 col-xs-12" >
+        <div class="service">
+          <h3><%= link_to "Sawse", recipe_path(14)  %> </h3>
+          <p>As with all good things, good sauce comes to he who waits.</p>
+        </div>
+      </div> 
       <% @recipes.each do |recipe| %>
       <div class="col-md-3 col-sm-6 col-xs-12" >
         <div class="service">
