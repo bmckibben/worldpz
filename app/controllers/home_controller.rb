@@ -16,4 +16,10 @@ class HomeController < ApplicationController
   	render :nothing => true, :status => 200
   end	
 
+  # GET /recipes/1
+  # GET /recipes/1.json
+  def display_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
 end

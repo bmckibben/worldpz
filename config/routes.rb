@@ -8,6 +8,7 @@ devise_for :users
   post 'home/contact_email' => 'home#contact_email'
   get 'blogs/list' => 'blogs#list' , :as => 'list_blogs'
   get 'blogs/display/:id(.:format)' => 'blogs#display', :as => 'display_blog'
+  get 'home/display_recipe/:id(.:format)' => 'home#display_recipe', :as => 'display_recipe'
   
   resources :recipe_ingredients
   resources :recipe_ingredients_units

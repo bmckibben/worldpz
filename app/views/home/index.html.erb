@@ -244,20 +244,22 @@
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-12" >
         <div class="service">
-          <h3><%= link_to "Dough!", recipe_path(13)  %> </h3>
+          <h3><%= link_to "Dough!", display_recipe_path(3), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#mdlRecipe'}  %> </h3>
           <p>You can&apos;t build anything without a good foundation.</p>
         </div>
       </div> 
       <div class="col-md-3 col-sm-6 col-xs-12" >
         <div class="service">
-          <h3><%= link_to "Sawse", recipe_path(14)  %> </h3>
+          <h3><%= link_to "Sawse", display_recipe_path(14), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#mdlRecipe'}  %> </h3>
           <p>As with all good things, good sauce comes to he who waits.</p>
         </div>
       </div> 
       <% @recipes.each do |recipe| %>
       <div class="col-md-3 col-sm-6 col-xs-12" >
         <div class="service">
-          <h3><%= link_to recipe.recipe_name, recipe %> </h3>
+          <h3>
+            <%= link_to recipe.recipe_name, display_recipe_path(recipe), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#mdlRecipe'}  %>
+          </h3>
           <p><%= recipe.recipe_description.html_safe %></p>
         </div>
       </div>
@@ -266,6 +268,23 @@
   </div>
 </div>
 
+<!-- Recipe Dialog -->
+<div class="modal fade" id="mdlRecipe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="float-left"><i aria-hidden="false" class="glyphicon glyphicon-print"></i></div>
+      </div>
+      <div class="modal-body" id="mdlRecipe-body">
+        Content here.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Team Section -->
 <div id="team" class="text-center">
