@@ -22,9 +22,13 @@
     <div class="switch" >
     <%= f.check_box :active, {id:"cmn-toggle-1",  class:"cmn-toggle cmn-toggle-round"}, checked_value="1", unchecked_value="0"  %>
     <label for="cmn-toggle-1"></label>
-  </div>
-  </div>  
-  <div class="col-md-7 col-xs-12 form-group">
+    </div>
+  </div> 
+  <div class="col-md-2 col-xs-12 form-group">
+    <%= f.label "Sort" %><br>
+    <%= f.number_field :sort_order, class: "form-control" %>
+  </div>   
+  <div class="col-md-5 col-xs-12 form-group">
     <%= f.label :recipe_name %><br>
     <%= f.text_field :recipe_name, class: "form-control" %>
   </div>
