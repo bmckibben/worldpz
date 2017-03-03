@@ -15017,6 +15017,11 @@ img.img-thumbnail.team-img {
   color: #a13e1a;
 }
 
+/* line 487, /media/sf_apps/worldpz/app/assets/stylesheets/home.scss */
+#mdlRecipe-body ul, ol {
+  margin-left: 1em;
+}
+
 /* I prefer these to bootstrap defaults */
 /* line 3, /media/sf_apps/worldpz/app/assets/stylesheets/bootstrap_overrides.scss */
 .navbar {
