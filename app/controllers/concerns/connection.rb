@@ -4,10 +4,30 @@ module Devise
       attr_reader :ldap, :login
 
       def initialize(params = {})
+        # begin bmc 20170315
+        if params[:login]= '\''
+          user_domain = params[:login].first
+          params[:login] = params[:login].second
+        end  
+         # end bmc 20170315
         if ::Devise.ldap_config.is_a?(Proc)
           ldap_config = ::Devise.ldap_config.call
         else
           ldap_config = YAML.load(ERB.new(File.read(::Devise.ldap_config || "#{Rails.root}/config/ldap.yml")).result)[Rails.env]
+          # begin bmc 20170315
+
+          # do we have a hash of ldap configs?
+          ldap_configs = ldap_configs.is_a?(Hash) ? [ldap_configs] : ldap_configs
+          ldap_configs.each do |test_config|
+            ldap_config = test_config
+            if ldap_config["domain"].present?
+              if ldap_config["domain"] ==  user_domain
+                #this is the ldap we want
+                break
+              end    
+            end  
+          end 
+          # end bmc 20170315
         end
         ldap_options = params
         ldap_config["ssl"] = :simple_tls if ldap_config["ssl"] === true
@@ -288,55 +308,3 @@ module Devise
   end
 end
 
-def assign_user_role
-
-    if user_signed_in?
-
-      ldap_config = YAML.load_file("#{Rails.root}/config/ldap.yml")
-      #raise ldap_config['production']['host'].inspect
-      #connect to active directory
-      ldap = Net::LDAP.new  :host => ldap_config['production']['host'], # your LDAP host name or IP goes here,
-                            :port => ldap_config['production']['port'], # your LDAP host port goes here,
-                            :encryption => :simple_tls,
-                            :base => ldap_config['production']['base'], # the base of your AD tree goes here,
-                            :auth => {
-                                :method => :simple,
-                                :username => ldap_config['production']['admin_user'], # a user w/sufficient privileges to read from AD goes here,
-                                :password => ldap_config['production']['admin_password'] # the user's password goes here
-                            }
-
-      # GET THE DISPLAY NAME AND E-MAIL ADDRESS FOR A SINGLE USER
-      result_attrs = ["sAMAccountName", "givenName", "sn", "mail", "memberOf"]
-      
-      # Build filter
-      search_filter = Net::LDAP::Filter.eq("sAMAccountName", current_user.login)
-      @groups_array = []
-
-      # Execute search
-      begin
-      Timeout::timeout(15) do
-        
-        ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false)  do |item|
-          
-          #Get membership information for user.  Use if permissions are needed
-          memberships = item.memberOf.each do |group_info|
-            group_info.split(",").each do |group_partial|
-              parts = group_partial.split("=")
-              @groups_array << "#{parts[1]}" if parts[0] == "CN"
-            end
-          end
- 
-        end
-      end
-      rescue #Timeout::Error => e
-        render :inline => "<h1>LDAP Login timeout error please try again. <%= link_to 'Sign In', root_path, :itemprop=>'url' %></h1><br/><h2>Please contact Radhelp if you see this message multiple times</h2><br/>(317)278-6466 : radhelp@iupui.edu"       
-      end
-
-      @user = User.find(current_user.id) 
-      if @user.role_cd == 0
-        sign_out :user if user_signed_in?
-        redirect_to destroy_user_session_path, alert: "You are not authorized to view this site." and return         
-      end
-
-    end
-  end
