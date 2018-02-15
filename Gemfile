@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.4.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -15,21 +14,14 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '4.2.1'
+gem 'jquery-rails'
+gem 'jquery-validation-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem "nokogiri"
-gem "crono"
-gem 'haml'
-gem 'sinatra', require: nil
-
 gem 'devise'
-gem 'pundit'
-gem 'bcrypt'
-gem 'simple_enum', '~> 2.0.0' , require: 'simple_enum/mongoid'
 
 # assets 
 gem 'bootstrap-sass'
@@ -37,6 +29,7 @@ gem 'font-awesome-sass'
 gem 'angularjs-rails', '1.5.6'
 # provides a CRSF Token Header for angularjs posts
 gem 'angular_rails_csrf', '1.0.4'
+gem 'simple_enum', '~> 2.0.0'
 
 # per heroku
 gem 'rails_12factor'
