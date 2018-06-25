@@ -123,3 +123,7 @@ function main() {
 $(document).ready(function() {
   main();
 });
+
+function printMe(){
+  $("#mdlRecipe").print()
+}
