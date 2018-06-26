@@ -4,7 +4,7 @@ class RecipeIngredientsController < ApplicationController
   # GET /recipe_ingredients
   # GET /recipe_ingredients.json
   def index
-    @recipe_ingredients = RecipeIngredient.all
+    @recipe_ingredients = RecipeIngredient.all.order(:ingredient_name)
   end
 
   # GET /recipe_ingredients/1

@@ -9,7 +9,7 @@
   </div>
   <div class="col-md-7 col-xs-12 field">
     <%= f.label "Ingredient" %><br>
-    <%= f.collection_select :recipe_ingredient_id, RecipeIngredient.all, :id, :ingredient_name,{}, {class: "form-control", style: "width:90%;"} %>
+    <%= f.collection_select :recipe_ingredient_id, RecipeIngredient.all.order(:ingredient_name), :id, :ingredient_name,{}, {class: "form-control", style: "width:90%;"} %>
   </div>  
   <div class="col-md-1 col-xs-12 field">
     <%= link_to_remove_fields "", f %>
