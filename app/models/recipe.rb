@@ -4,7 +4,7 @@ class Recipe < ActiveRecord::Base
 	has_many :recipe_images
 	accepts_nested_attributes_for :recipe_images, :reject_if => lambda {|a| a[:image_url].blank? }, :allow_destroy => true
 
-	has_many :recipe_steps, :dependent => :destroy
+	has_many :recipe_steps, :dependent => :destroy, -> {order(step_order: :asc)}
 	accepts_nested_attributes_for :recipe_steps, :allow_destroy => true
 	
 	has_many :recipe_ingredient_links, :dependent => :destroy
