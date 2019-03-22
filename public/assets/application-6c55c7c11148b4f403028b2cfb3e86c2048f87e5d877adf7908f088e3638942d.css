@@ -17721,7 +17721,7 @@ body, html {
 
 /* line 125, /mnt/c/Repos/worldpz/app/assets/stylesheets/home.scss */
 .banner-down-link {
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 
@@ -17731,7 +17731,7 @@ body, html {
   font-size: 36px;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 20%;
+  margin-top: 30%;
   display: block;
   height: auto;
   margin-left: auto;
@@ -17909,7 +17909,7 @@ body, html {
 
   /* line 270, /mnt/c/Repos/worldpz/app/assets/stylesheets/home.scss */
   .banner-down {
-    font-size: 56px;
+    font-size: 76px;
   }
 }
 /* line 276, /mnt/c/Repos/worldpz/app/assets/stylesheets/home.scss */
