@@ -17713,7 +17713,7 @@ body, html {
 /* line 118, /mnt/c/Repos/worldpz/app/assets/stylesheets/home.scss */
 .banner-centered {
   display: block;
-  width: 50%;
+  width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -17721,7 +17721,7 @@ body, html {
 
 /* line 125, /mnt/c/Repos/worldpz/app/assets/stylesheets/home.scss */
 .banner-down-link {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 
