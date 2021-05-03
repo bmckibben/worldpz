@@ -1,47 +1,66 @@
 source 'https://rubygems.org'
-ruby "2.6.3"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '2.7.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'#, github: 'rails/rails'
-# Use postgresql as the database for Active Record
+gem 'rails'
+
 gem 'pg'
+# Use Puma as the app server
+gem 'puma'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
+# See https://github.com/rails/execjs#readme for more supported runtimes
+# gem 'mini_racer', platforms: :ruby
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+#gem 'turbolinks'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-validation-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc',  group: :doc
 
-gem 'devise'
-
-# assets 
+# Markup and design related libraries
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'bootstrap-sass'
+gem 'bootstrap-select-rails'
 gem 'font-awesome-sass'
-gem 'angularjs-rails'
-# provides a CRSF Token Header for angularjs posts
-gem 'angular_rails_csrf'
-gem 'simple_enum'
+gem 'rails-assets-tether'
+
+# stuff I intend to use
+gem 'redis'
+gem "devise", ">= 4.6.0"
+gem 'devise_invitable'
+gem 'simple_form'
+gem 'friendly_id'
+gem 'haml'
+gem 'haml-rails'
+gem 'activeadmin'
+gem 'browser-timezone-rails'
+gem 'request_store'
+gem 'kaminari'
+gem 'tinymce-rails'
+gem "nokogiri"
 
 # per heroku
 gem 'rails_12factor'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console'
+  gem 'better_errors'
+  gem "binding_of_caller" 
+  gem "annotate"
+  # javascript runtine is required for Windows Subsystem for Linux/Ubuntu
+  gem 'therubyracer', platforms: :ruby  
+  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]   
+  gem 'listen'
 end
 

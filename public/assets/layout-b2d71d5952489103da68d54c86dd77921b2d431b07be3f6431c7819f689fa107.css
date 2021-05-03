@@ -1,0 +1,426 @@
+/* line 1, app/assets/stylesheets/layout.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, app/assets/stylesheets/layout.scss */
+main {
+  padding-bottom: 80px;
+  width: 100%;
+  min-height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 50px auto -100px;
+}
+
+/* line 19, app/assets/stylesheets/layout.scss */
+section {
+  margin-top: 20px;
+}
+
+/* line 24, app/assets/stylesheets/layout.scss */
+footer {
+  position: relative;
+  height: 50px;
+  clear: both;
+  color: #666;
+  padding-left: 2em;
+  background: transparent;
+  border-top: 1px solid #666;
+}
+
+/* line 34, app/assets/stylesheets/layout.scss */
+.top10 {
+  margin-top: 10px;
+}
+
+/* line 35, app/assets/stylesheets/layout.scss */
+.top20 {
+  margin-top: 20px;
+}
+
+/* line 36, app/assets/stylesheets/layout.scss */
+.top30 {
+  margin-top: 30px;
+}
+
+/* line 37, app/assets/stylesheets/layout.scss */
+.top50 {
+  margin-top: 50px;
+}
+
+/* line 38, app/assets/stylesheets/layout.scss */
+.top100 {
+  margin-top: 100px;
+}
+
+/* line 40, app/assets/stylesheets/layout.scss */
+#error_explanation h2 {
+  font-size: 16px;
+}
+
+/* line 44, app/assets/stylesheets/layout.scss */
+.alert {
+  z-index: 1050;
+}
+
+/* line 48, app/assets/stylesheets/layout.scss */
+header nav ul {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+/* line 53, app/assets/stylesheets/layout.scss */
+header nav ul li {
+  display: inline;
+}
+
+/* Serif font */
+/* line 59, app/assets/stylesheets/layout.scss */
+body,
+#main-title,
+.mainText,
+.article p,
+.article-title h1,
+.article-title h2,
+.hentry .article-date,
+.article-extras strong,
+.article-entry h3,
+.article-entry blockquote,
+.article-entry cite,
+.comment-text h3,
+.comment-text blockquote,
+.comment-text cite,
+.more-posts .page-title,
+.more-posts .notice,
+#more-posts-inner h1,
+#more-posts-inner article span,
+#comments h3,
+#respond h3,
+#upper-footer-widgets .widget_text,
+#error404 {
+  font-family: "Times New Roman", Georgia, Serif;
+  color: #333;
+  font-size: 16px;
+}
+
+/* line 86, app/assets/stylesheets/layout.scss */
+body, html {
+  /*padding-top: 40px;*/
+  background: #fff;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* line 95, app/assets/stylesheets/layout.scss */
+.mainText {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* line 101, app/assets/stylesheets/layout.scss */
+.navbar-inner {
+  /*background: asset-url("linebk.gif", image) repeat left top;*/
+  background-color: #999;
+}
+
+/* line 106, app/assets/stylesheets/layout.scss */
+.nav > li > a {
+  color: #66CCFF;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: none !important;
+  font-family: verdana, serif;
+}
+
+/* line 116, app/assets/stylesheets/layout.scss */
+.nav > li > a:link {
+  color: #66CCFF;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/* line 123, app/assets/stylesheets/layout.scss */
+.nav > li > a:visited {
+  color: #66CCFF;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/* line 130, app/assets/stylesheets/layout.scss */
+.nav > li > a:active {
+  color: #66CCFF;
+  float: none;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/* line 137, app/assets/stylesheets/layout.scss */
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+  color: #CC33FF !important;
+  text-decoration: underline;
+  float: none;
+  padding: 10px 15px;
+  background-color: transparent;
+}
+
+/* line 145, app/assets/stylesheets/layout.scss */
+.navbar-default {
+  background-color: transparent;
+  border: none;
+}
+
+/* line 150, app/assets/stylesheets/layout.scss */
+.navbar {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* Navigation */
+/* line 156, app/assets/stylesheets/layout.scss */
+.navbar-custom {
+  padding: 0;
+  border-bottom: 0;
+  letter-spacing: 1px;
+  background: #333;
+  text-transform: uppercase;
+}
+
+/* line 163, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-brand {
+  font-weight: 600;
+}
+
+/* line 166, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-brand i.fa {
+  color: #26B4E7;
+}
+
+/* line 169, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-brand:focus {
+  outline: 0;
+}
+
+/* line 172, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-toggle {
+  color: #eee;
+  font-size: 18px;
+  border-radius: 2px;
+  padding: 0 4px;
+}
+
+/* line 178, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+  background-color: #26B4E7;
+  color: #ffffff;
+}
+
+/* line 182, app/assets/stylesheets/layout.scss */
+.navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
+  outline: 0;
+}
+
+/* line 185, app/assets/stylesheets/layout.scss */
+.navbar-custom a {
+  color: #fff;
+}
+
+/* line 188, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li a {
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+}
+
+/* line 193, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li a:hover {
+  outline: 0;
+  color: #26B4E7;
+  background-color: transparent;
+}
+
+/* line 198, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+  outline: 0;
+  background-color: transparent;
+  color: #26B4E7;
+}
+
+/* line 203, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li.active {
+  outline: 0;
+}
+
+/* line 206, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* line 209, app/assets/stylesheets/layout.scss */
+.navbar-custom .nav li.active a:hover {
+  color: #fff;
+}
+
+/* line 213, app/assets/stylesheets/layout.scss */
+.panel-body {
+  color: #000009;
+}
+
+/* line 216, app/assets/stylesheets/layout.scss */
+.rightCol {
+  margin-right: 50px;
+  width: 90%;
+}
+
+/* line 221, app/assets/stylesheets/layout.scss */
+.topCol {
+  margin-top: 1em;
+}
+
+/* line 225, app/assets/stylesheets/layout.scss */
+.form-group {
+  margin-bottom: 5px;
+}
+
+/* line 229, app/assets/stylesheets/layout.scss */
+.modal-header {
+  min-height: 0;
+  color: #666;
+}
+
+/* line 234, app/assets/stylesheets/layout.scss */
+.modal-footer {
+  padding: 5px;
+}
+
+/* line 238, app/assets/stylesheets/layout.scss */
+.modal-dialog {
+  max-width: 800px;
+  color: #666;
+}
+
+/* line 243, app/assets/stylesheets/layout.scss */
+#myModalLabel {
+  margin: 0;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+/* -------------------------------------------------- */
+@media (max-width: 400px) {
+  /* phone size */
+  /* Navbar positioning */
+  /* line 255, app/assets/stylesheets/layout.scss */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  /* line 258, app/assets/stylesheets/layout.scss */
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  /* line 262, app/assets/stylesheets/layout.scss */
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* The navbar becomes detached from the top, so we round the corners */
+  /* line 268, app/assets/stylesheets/layout.scss */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+  /* line 272, app/assets/stylesheets/layout.scss */
+  .navbar-lower {
+    margin-top: 100px;
+  }
+  /* line 276, app/assets/stylesheets/layout.scss */
+  .navbar-brand img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Footer Section*/
+/* line 285, app/assets/stylesheets/layout.scss */
+#footer {
+  background: #333;
+  color: #777;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* line 291, app/assets/stylesheets/layout.scss */
+#footer a {
+  color: #999999;
+}
+
+/* line 294, app/assets/stylesheets/layout.scss */
+#footer a:hover, a:focus {
+  color: #26B4E7;
+}
+
+/* line 297, app/assets/stylesheets/layout.scss */
+#footer p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* line 303, app/assets/stylesheets/layout.scss */
+.isotope-item {
+  z-index: 2;
+}
+
+/* line 306, app/assets/stylesheets/layout.scss */
+.isotope-hidden.isotope-item {
+  z-index: 1;
+}
+
+/* line 309, app/assets/stylesheets/layout.scss */
+.isotope, .isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+
+/* line 315, app/assets/stylesheets/layout.scss */
+.isotope-item {
+  margin-right: -1px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 320, app/assets/stylesheets/layout.scss */
+.isotope {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+/* line 327, app/assets/stylesheets/layout.scss */
+.isotope .isotope-item {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+/* line 335, app/assets/stylesheets/layout.scss */
+.no-bottom-margin {
+  margin-bottom: 0;
+}

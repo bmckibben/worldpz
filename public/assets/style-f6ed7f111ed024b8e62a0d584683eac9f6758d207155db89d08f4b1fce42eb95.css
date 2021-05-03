@@ -1,0 +1,364 @@
+/* thanks to: Ultimate CSS Gradient Generator (http://www.colorzilla.com/gradient-editor/) */
+/* line 2, app/assets/stylesheets/style.scss */
+.btn-primary:hover {
+  background: #2d77af;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #2d77af 0%, #0099ff 50%, #0085f2 51%, #7db9e8 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2d77af), color-stop(50%, #0099ff), color-stop(51%, #0085f2), color-stop(100%, #7db9e8));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2d77af 0%, #0099ff 50%, #0085f2 51%, #7db9e8 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2d77af 0%, #0099ff 50%, #0085f2 51%, #7db9e8 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2d77af 0%, #0099ff 50%, #0085f2 51%, #7db9e8 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #2d77af 0%, #0099ff 50%, #0085f2 51%, #7db9e8 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d77af', endColorstr='#7db9e8',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 13, app/assets/stylesheets/style.scss */
+.btn-primary {
+  background: #7db9e8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #7db9e8 0%, #0085f2 49%, #0099ff 50%, #2d77af 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7db9e8), color-stop(49%, #0085f2), color-stop(50%, #0099ff), color-stop(100%, #2d77af));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #7db9e8 0%, #0085f2 49%, #0099ff 50%, #2d77af 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #7db9e8 0%, #0085f2 49%, #0099ff 50%, #2d77af 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #7db9e8 0%, #0085f2 49%, #0099ff 50%, #2d77af 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #7db9e8 0%, #0085f2 49%, #0099ff 50%, #2d77af 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#2d77af',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 24, app/assets/stylesheets/style.scss */
+.btn-default {
+  color: #000000;
+  border: 1;
+  padding: 6px 12px;
+  margin: 0 0.5em 0.5em;
+  font-size: 14px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,e5e5e5+55,bfc5c9+100 */
+  background: #f6f8f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #e5e5e5 55%, #bfc5c9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #e5e5e5 55%, #bfc5c9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f6f8f9 0%, #e5ebee 50%, #e5e5e5 55%, #bfc5c9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#bfc5c9',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 38, app/assets/stylesheets/style.scss */
+.btn-default:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfc5c9+0,e5e5e5+45,e5ebee+50,f6f8f9+100 */
+  background: #bfc5c9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #bfc5c9 0%, #e5e5e5 45%, #e5ebee 50%, #f6f8f9 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #bfc5c9 0%, #e5e5e5 45%, #e5ebee 50%, #f6f8f9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #bfc5c9 0%, #e5e5e5 45%, #e5ebee 50%, #f6f8f9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfc5c9', endColorstr='#f6f8f9',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 47, app/assets/stylesheets/style.scss */
+h1 {
+  font-weight: 700;
+}
+
+/* line 50, app/assets/stylesheets/style.scss */
+h1 strong {
+  font-weight: 900;
+}
+
+/* line 53, app/assets/stylesheets/style.scss */
+h2 {
+  text-transform: uppercase;
+  line-height: 30px;
+  font-weight: 600;
+  margin: 0;
+  color: #555;
+}
+
+/* line 60, app/assets/stylesheets/style.scss */
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #555;
+}
+
+/* line 65, app/assets/stylesheets/style.scss */
+h4 {
+  font-weight: 500;
+  color: #555;
+}
+
+/* line 69, app/assets/stylesheets/style.scss */
+h5 {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* line 75, app/assets/stylesheets/style.scss */
+p {
+  font-size: 14px;
+}
+
+/* line 79, app/assets/stylesheets/style.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 87, app/assets/stylesheets/style.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* line 90, app/assets/stylesheets/style.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 93, app/assets/stylesheets/style.scss */
+.clearfix {
+  display: block;
+}
+
+/* line 97, app/assets/stylesheets/style.scss */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ddd;
+  z-index: 99999;
+  height: 100%;
+}
+
+/* line 108, app/assets/stylesheets/style.scss */
+#status {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  padding: 0;
+}
+
+/* line 118, app/assets/stylesheets/style.scss */
+ul, ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+}
+
+/* line 124, app/assets/stylesheets/style.scss */
+hr {
+  height: 4px;
+  width: 70px;
+  text-align: center;
+  position: relative;
+  background: #26B4E7;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 0;
+}
+
+/* line 137, app/assets/stylesheets/style.scss */
+ol.type li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* line 141, app/assets/stylesheets/style.scss */
+ol.type li a {
+  color: #777;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+/* line 147, app/assets/stylesheets/style.scss */
+ol.type li a.active {
+  color: #f6f6f6;
+  border: 1px solid #cf5022;
+  background: #cf5022;
+}
+
+/* line 152, app/assets/stylesheets/style.scss */
+ol.type li a:hover {
+  color: #f6f6f6;
+  border: 1px solid #cf5022;
+  background: #cf5022;
+}
+
+/* line 160, app/assets/stylesheets/style.scss */
+label {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+}
+
+/* line 167, app/assets/stylesheets/style.scss */
+.btn:active, .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 173, app/assets/stylesheets/style.scss */
+a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus {
+  outline: none;
+  outline-offset: none;
+}
+
+/* ------------------------------------------------------ */
+@media (max-width: 768px) {
+  /* line 179, app/assets/stylesheets/style.scss */
+  .hover-bg .hover-text {
+    padding: 20%;
+  }
+}
+
+/* ------------------------------------------------------ */
+@media (max-width: 640px) {
+  /* line 185, app/assets/stylesheets/style.scss */
+  #intro .intro-body H1 {
+    font-size: 36px;
+  }
+  /* line 188, app/assets/stylesheets/style.scss */
+  ol.type li {
+    margin-top: 30px;
+  }
+}
+
+/* ------------------------------------------------------ */
+/* line 194, app/assets/stylesheets/style.scss */
+.recipe-desc {
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 24px;
+}
+
+/* line 199, app/assets/stylesheets/style.scss */
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 204, app/assets/stylesheets/style.scss */
+.recipe-description {
+  width: 100%;
+  height: 200px;
+}
+
+/* line 209, app/assets/stylesheets/style.scss */
+.space {
+  margin-top: 40px;
+}
+
+/* cmn toggles - fancy boolean checkboxes */
+/* line 214, app/assets/stylesheets/style.scss */
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+/* line 219, app/assets/stylesheets/style.scss */
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+}
+
+/* line 225, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round + label {
+  padding: 2px;
+  width: 40px;
+  height: 20px;
+  background-color: #dddddd;
+  border-radius: 20px;
+}
+
+/* line 232, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+/* line 241, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  transition: background 0.4s;
+}
+
+/* line 247, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round + label:after {
+  width: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+}
+
+/* line 254, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round:checked + label:before {
+  background-color: #8ce196;
+}
+
+/* line 257, app/assets/stylesheets/style.scss */
+input.cmn-toggle-round:checked + label:after {
+  margin-left: 20px;
+}
+
+/* line 261, app/assets/stylesheets/style.scss */
+.red {
+  color: #f00;
+}
+
+/* line 265, app/assets/stylesheets/style.scss */
+.green {
+  color: #0f0;
+}
+
+/* ----------------------------------------------------- */
+/* line 270, app/assets/stylesheets/style.scss */
+#blog-display ul {
+  margin-left: 3em;
+}
+
+/* line 274, app/assets/stylesheets/style.scss */
+#blog-display .text-area-input-btn {
+  height: 75px;
+  margin: 0;
+  border: none;
+}
