@@ -21,5 +21,5 @@
 //= require SmoothScroll
 //= require z.isotope
 //= require z.prettyPhoto
-//= require tinymce-jquery
+//= require tinymce
 //= require home
