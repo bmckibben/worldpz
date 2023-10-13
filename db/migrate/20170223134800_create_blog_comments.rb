@@ -1,4 +1,4 @@
-class CreateBlogComments < ActiveRecord::Migration
+class CreateBlogComments < ActiveRecord::Migration[5.2]
   def change
     create_table :blog_comments do |t|
       t.text :body

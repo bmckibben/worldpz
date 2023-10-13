@@ -15,12 +15,13 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 <div id="preloader">
   <div id="status"><%= image_tag("preloader.gif", size: "64", alt: "") %> </div>
 </div>
 <!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="navbar navbar-custom navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"><i class="fa fa-bars"></i></button>
@@ -51,7 +52,7 @@
     <!-- /.navbar-collapse --> 
   </div>
   <!-- /.container --> 
-</nav>
+</div>
 
 <!-- Header -->
 <div id="intro">
@@ -265,7 +266,7 @@
 </div>
 
 <!-- Recipe Dialog -->
-<div class="modal fade" id="mdlRecipe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="mdlRecipe" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -382,14 +383,7 @@
       </form>
       </div>
 
-      <div class="social">
-        <h3>Follow World Pz</h3>
-        <ul>
-          <li><a href="https://www.facebook.com/1worldpiz"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com/1WorldPiz"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="https://github.com/bmckibben/worldpz"><i class="fa fa-github"></i></a></li>
-        </ul>
-      </div>
+
     </div>
   </div>
 </div>

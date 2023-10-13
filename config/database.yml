@@ -1,18 +1,38 @@
+# default and development switch between  home and work
+#home and prod###############################################################
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see Rails configuration guide
+#   # https://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   host: localhost
+#   port: 5432
+
+# development:
+#   <<: *default
+#   database: worldpz
+#   username: paxxa
+#   password: paxxa
+#work#######################################################################
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: worldpz
-  password: worldpz
-  pool: 5
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: bmckibben
+  password: C_satori22
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
-  database: worldpz
+  database: worldpz_development  
+############################################################################  
 
-# test:
-#   <<: *default
-#   database: worldpz_test
+test:
+  <<: *default
+  database: worldpz_test
+  username: bmckibben
+  password: C_satori22
 
 production:
   <<: *default

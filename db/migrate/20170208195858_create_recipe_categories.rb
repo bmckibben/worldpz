@@ -1,4 +1,4 @@
-class CreateRecipeCategories < ActiveRecord::Migration
+class CreateRecipeCategories < ActiveRecord::Migration[5.2]
   def change
     create_table :recipe_categories do |t|
       t.string :category_name

@@ -1,28 +1,30 @@
+'use strict';
+
+$(document).ready(function() {
+  main();
+  initParallax();
+});
 
 function main() {
 
-(function () {
-   'use strict';
-
 	// Hide .navbar-custom first
 	$(".navbar-custom").hide();
-	
+	//$(".navbar-default").hide();
 	// Fade in .navbar-custom
-	$(function () {
-		$(window).scroll(function () {
-            // set distance user needs to scroll before we fadeIn navbar-custom
-			if ($(this).scrollTop() > 200) {
-				$('.navbar-custom').fadeIn();
-			} else {
-				$('.navbar-custom').fadeOut();
-			}
-		});
+
+	$(window).scroll(function () {
+          // set distance user needs to scroll before we fadeIn navbar-custom
+		if ($(this).scrollTop() > 200) {
+			$('.navbar-custom').fadeIn();
+		} else {
+			$('.navbar-custom').fadeOut();
+		}
+	});
+
 
 	
-	});
-	
 	// Preloader */
-	  	$(window).load(function() {
+	  $(window).load(function() {
 
    	// will first fade out the loading animation 
     	$("#status").fadeOut("slow"); 
@@ -61,47 +63,40 @@ function main() {
         offset: 80
     })
 
-  	$(document).ready(function() {
-/*  	    $("#testimonial").owlCarousel({
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true
-        });
-*/
-  	});
 
   	// Merch Isotope Filter
-    $(window).load(function() {
-        var $container = $('.merch-items');
+
+    var $container = $('.merch-items');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+    $('.cat a').click(function() {
+        $('.cat .active').removeClass('active');
+        $(this).addClass('active');
+        var selector = $(this).attr('data-filter');
         $container.isotope({
-            filter: '*',
+            filter: selector,
             animationOptions: {
                 duration: 750,
                 easing: 'linear',
                 queue: false
             }
         });
-        $('.cat a').click(function() {
-            $('.cat .active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            return false;
-        });
-
+        return false;
     });
-	
-	
 
-  // jQuery Parallax
+    // Pretty Photo
+  $("a[rel^='prettyPhoto']").prettyPhoto({
+    social_tools: false
+  }); 
+}
+	
+	// jQuery Parallax
   function initParallax() {
     $('#intro').parallax("100%", 0.3);
     $('#recipes').parallax("100%", 0.3);
@@ -109,20 +104,10 @@ function main() {
     $('#testimonials').parallax("100%", 0.1);
 
   }
-  initParallax();
 
-  	// Pretty Photo
-	$("a[rel^='prettyPhoto']").prettyPhoto({
-		social_tools: false
-	});	
 
-}());
 
-};
 
-$(document).ready(function() {
-  main();
-});
 
 function printMe(printDiv){
   var printContent = $("#"+printDiv).html();

@@ -1,4 +1,4 @@
-class CreateRecipeIngredientLinks < ActiveRecord::Migration
+class CreateRecipeIngredientLinks < ActiveRecord::Migration[5.2]
   def change
     create_table :recipe_ingredient_links do |t|
       t.integer :recipe_id

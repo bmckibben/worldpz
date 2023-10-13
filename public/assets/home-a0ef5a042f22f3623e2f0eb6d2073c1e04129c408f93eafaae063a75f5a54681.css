@@ -1,0 +1,632 @@
+/* line 1, app/assets/stylesheets/home.scss */
+.carousel,
+.item,
+.active {
+  height: 100%;
+}
+
+/* line 7, app/assets/stylesheets/home.scss */
+.carousel-inner {
+  height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+/* line 13, app/assets/stylesheets/home.scss */
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover !important;
+  -o-background-size: cover;
+}
+
+/* line 23, app/assets/stylesheets/home.scss */
+.carousel-control {
+  font-size: 36px;
+}
+
+/* line 27, app/assets/stylesheets/home.scss */
+.carousel {
+  height: 400px;
+}
+
+/* line 30, app/assets/stylesheets/home.scss */
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 36, app/assets/stylesheets/home.scss */
+.text-vertical-center h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  font-weight: 700;
+}
+
+/* About */
+/* line 46, app/assets/stylesheets/home.scss */
+.about {
+  padding: 50px 0;
+}
+
+/* recipes */
+/* line 52, app/assets/stylesheets/home.scss */
+.recipes {
+  padding: 50px 0;
+}
+
+/* line 56, app/assets/stylesheets/home.scss */
+.service-item {
+  margin-bottom: 30px;
+}
+
+/* Callout */
+/* line 62, app/assets/stylesheets/home.scss */
+.callout {
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  background: url(/../img/callout.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* Portfolio */
+/* line 76, app/assets/stylesheets/home.scss */
+.portfolio {
+  padding: 50px 20px;
+}
+
+/* line 80, app/assets/stylesheets/home.scss */
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+/* line 84, app/assets/stylesheets/home.scss */
+.portfolio-item p {
+  text-align: justify;
+}
+
+/* line 88, app/assets/stylesheets/home.scss */
+.img-portfolio {
+  margin: 0 auto;
+}
+
+/* line 92, app/assets/stylesheets/home.scss */
+.img-portfolio:hover {
+  opacity: 0.8;
+}
+
+/* Call to Action */
+/* line 98, app/assets/stylesheets/home.scss */
+.call-to-action {
+  padding: 50px 0;
+}
+
+/* line 102, app/assets/stylesheets/home.scss */
+.call-to-action .btn {
+  margin: 10px;
+}
+
+/* Map */
+/* line 108, app/assets/stylesheets/home.scss */
+.map {
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  /* line 113, app/assets/stylesheets/home.scss */
+  .map {
+    height: 75%;
+  }
+}
+
+/* line 118, app/assets/stylesheets/home.scss */
+.banner-centered {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 125, app/assets/stylesheets/home.scss */
+.banner-down-link {
+  width: 150px;
+  height: auto;
+}
+
+/* line 129, app/assets/stylesheets/home.scss */
+.banner-down {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 30%;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About Section */
+/* line 141, app/assets/stylesheets/home.scss */
+#about {
+  padding: 140px 0;
+  background: #f6f6f6;
+}
+
+/* line 145, app/assets/stylesheets/home.scss */
+#about .about-text {
+  margin-left: 10px;
+}
+
+/* line 148, app/assets/stylesheets/home.scss */
+#about H4 {
+  font-size: 20px;
+}
+
+/* line 151, app/assets/stylesheets/home.scss */
+#about ul {
+  margin-left: 2em;
+}
+
+/* line 154, app/assets/stylesheets/home.scss */
+#about li {
+  margin-top: 1em;
+  margin-bottom: 3px;
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  list-style-type: circle;
+}
+
+/* line 164, app/assets/stylesheets/home.scss */
+#about a:focus, #about a:hover {
+  color: #CC33FF !important;
+  text-decoration: underline;
+}
+
+/* line 170, app/assets/stylesheets/home.scss */
+#about i.fa {
+  float: left;
+  display: block;
+  margin-right: 15px;
+  color: #fff;
+  font-size: 44px;
+  text-shadow: 0 0 1px #666;
+}
+
+/* line 178, app/assets/stylesheets/home.scss */
+#about img {
+  margin-top: 20px;
+}
+
+/* line 181, app/assets/stylesheets/home.scss */
+#about p {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+/* recipes Section */
+/* line 186, app/assets/stylesheets/home.scss */
+#recipes {
+  padding: 140px 0;
+  background: url(/assets/33-358a79d09b4e7c9d426fef6c81af0c3c6f0adf85fb7553c370007920959f573f.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* line 192, app/assets/stylesheets/home.scss */
+#recipes .service {
+  height: 170px;
+  padding: 20px 10px;
+}
+
+/* line 197, app/assets/stylesheets/home.scss */
+#recipes h2 {
+  color: #0206aa;
+}
+
+/* line 200, app/assets/stylesheets/home.scss */
+#recipes h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0206aa;
+}
+
+/* line 205, app/assets/stylesheets/home.scss */
+#recipes p {
+  color: #0206aa;
+  font-weight: bold;
+}
+
+/* line 210, app/assets/stylesheets/home.scss */
+#recipes a {
+  color: #0206aa;
+  text-decoration: underline;
+}
+
+/* line 215, app/assets/stylesheets/home.scss */
+#recipes a:hover {
+  color: #CC33FF !important;
+  text-decoration: underline;
+}
+
+/* line 220, app/assets/stylesheets/home.scss */
+#recipes i.fa {
+  font-size: 36px;
+  color: #26B4E7;
+  transition: all 0.5s;
+}
+
+/* Home Section */
+/* line 227, app/assets/stylesheets/home.scss */
+#intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  background: url(/assets/43-4deb612e841bbfe059eac3602bf584e958ea559b2687a44f651f256a39228f9b.jpg) no-repeat center center fixed;
+  background-color: #000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 241, app/assets/stylesheets/home.scss */
+#intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 245, app/assets/stylesheets/home.scss */
+#intro .intro-body H1 {
+  font-size: 76px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+}
+
+/* line 251, app/assets/stylesheets/home.scss */
+#intro .intro-body .brand-heading {
+  color: #26B4E7;
+  text-shadow: 0 4px #186885;
+}
+
+/* line 255, app/assets/stylesheets/home.scss */
+#intro .intro-body .intro-text {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  /* line 260, app/assets/stylesheets/home.scss */
+  #intro {
+    height: 100%;
+    padding: 0;
+  }
+  /* line 264, app/assets/stylesheets/home.scss */
+  #intro .intro-body .intro-text {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 100px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  /* line 270, app/assets/stylesheets/home.scss */
+  .banner-down {
+    font-size: 76px;
+  }
+}
+
+/* line 276, app/assets/stylesheets/home.scss */
+.section-title.center {
+  padding: 30px 0;
+}
+
+/* line 279, app/assets/stylesheets/home.scss */
+.section-title h2, .section-title.center h2 {
+  margin-bottom: 20px;
+}
+
+/* Gallery Section */
+/* line 284, app/assets/stylesheets/home.scss */
+#works {
+  padding: 120px 0;
+  background: #f6f6f6;
+}
+
+/* line 288, app/assets/stylesheets/home.scss */
+.categories {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* line 292, app/assets/stylesheets/home.scss */
+ul.cat li {
+  display: inline-block;
+}
+
+/* line 297, app/assets/stylesheets/home.scss */
+.hover-bg .hover-text {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.66);
+  padding: 25% 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+/* line 309, app/assets/stylesheets/home.scss */
+.hover-bg .hover-text > h4 {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.3s;
+  color: #f6f6f6;
+}
+
+/* line 316, app/assets/stylesheets/home.scss */
+.hover-bg:hover .hover-text > h4 {
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 322, app/assets/stylesheets/home.scss */
+.hover-bg .hover-text > p {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+
+/* line 328, app/assets/stylesheets/home.scss */
+.hover-bg:hover .hover-text > p {
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 334, app/assets/stylesheets/home.scss */
+.hover-bg .hover-text > i {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+
+/* line 340, app/assets/stylesheets/home.scss */
+.hover-bg:hover .hover-text > i {
+  opacity: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+/* line 346, app/assets/stylesheets/home.scss */
+.hover-bg:hover .hover-text {
+  opacity: 1;
+}
+
+/* line 350, app/assets/stylesheets/home.scss */
+#works i.fa {
+  font-size: 20px;
+  padding: 5px;
+  color: #F4D03F;
+}
+
+/* Team Section */
+/* line 356, app/assets/stylesheets/home.scss */
+#team {
+  padding: 140px 0;
+  background: #e6e6e6;
+}
+
+/* line 360, app/assets/stylesheets/home.scss */
+img.img-thumbnail.team-img {
+  width: 200px;
+  height: 200px;
+  border: 0;
+  border-radius: 0;
+  background-color: #f6f6f6;
+}
+
+/* line 367, app/assets/stylesheets/home.scss */
+#team .thumbnail {
+  background: transparent;
+  border: 0;
+}
+
+/* line 371, app/assets/stylesheets/home.scss */
+#team .thumbnail .caption {
+  padding: 9px;
+  color: #777;
+}
+
+/* Testimonials Section */
+/* line 376, app/assets/stylesheets/home.scss */
+#testimonials {
+  background: url(/assets/36-88dc16d00b9c5dcbe8a4bd6a709421fa7605cd318d23de65d16784e028220b5a.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ddd;
+  padding: 140px 0;
+}
+
+/* line 383, app/assets/stylesheets/home.scss */
+#testimonials h2 {
+  color: #fff;
+}
+
+/* line 387, app/assets/stylesheets/home.scss */
+#testimonials hr {
+  color: #fff;
+}
+
+/* line 391, app/assets/stylesheets/home.scss */
+#testimonials blockquote {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* line 397, app/assets/stylesheets/home.scss */
+#testimonials i {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 14px;
+}
+
+/* line 402, app/assets/stylesheets/home.scss */
+#testimonials .clients-name {
+  display: inline-block;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+/* bmc customizations */
+/* line 409, app/assets/stylesheets/home.scss */
+.testimonial-well {
+  min-height: 20px;
+  padding: 19px;
+  margin: 0px 10px 20px;
+  background-color: rgba(25, 25, 25, 0.7);
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+/* Contact Section */
+/* line 421, app/assets/stylesheets/home.scss */
+#contact {
+  padding: 120px 0 40px 0;
+  background: #f6f6f6;
+}
+
+/* line 425, app/assets/stylesheets/home.scss */
+#contact .contact-item {
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+/* line 431, app/assets/stylesheets/home.scss */
+#contact h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+/* line 436, app/assets/stylesheets/home.scss */
+#contact form {
+  padding: 30px 0;
+}
+
+/* line 439, app/assets/stylesheets/home.scss */
+#contact i.fa {
+  font-size: 22px;
+  color: #26B4E7;
+  margin-bottom: 10px;
+}
+
+/* line 444, app/assets/stylesheets/home.scss */
+#contact .text-danger {
+  color: #ff3333;
+  text-align: left;
+}
+
+/* line 449, app/assets/stylesheets/home.scss */
+#contact .form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 466, app/assets/stylesheets/home.scss */
+#contact .form-control:focus {
+  border-color: inherit;
+  outline: 0;
+  -webkit-box-shadow: transparent;
+  box-shadow: transparent;
+}
+
+/* line 472, app/assets/stylesheets/home.scss */
+#contact .btn-default {
+  background: #cf5022;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #f6f6f6;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* line 481, app/assets/stylesheets/home.scss */
+#contact .btn-default:hover, #contact .btn-default:focus {
+  color: #f6f6f6;
+  background: #a13e1a;
+}
+
+/* line 486, app/assets/stylesheets/home.scss */
+#contact .social ul {
+  margin-top: 30px;
+}
+
+/* line 489, app/assets/stylesheets/home.scss */
+#contact .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* line 493, app/assets/stylesheets/home.scss */
+#contact .social i.fa {
+  font-size: 24px;
+  padding-top: 8px;
+  color: #26B4E7;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+/* line 500, app/assets/stylesheets/home.scss */
+#contact .social i.fa:hover {
+  color: #a13e1a;
+}
+
+/* line 504, app/assets/stylesheets/home.scss */
+#mdlRecipe-body ul, ol {
+  margin-left: 1em;
+}
